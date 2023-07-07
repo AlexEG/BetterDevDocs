@@ -38,15 +38,15 @@ aside::-webkit-scrollbar-track {
   border-radius: 5px;
 }
 
-aside::-webkit-scrollbar-track:hover {
+div.sidebar-content:hover aside::-webkit-scrollbar-track {
   background: linear-gradient(0deg, rgb(64, 64, 64), transparent, transparent)
 }
 
 aside::-webkit-scrollbar-thumb {
-  background: rgb(229, 229, 229);
+  background: #e5e5e5;
   border-radius: 5px;
 }
 
 aside::-webkit-scrollbar-thumb:hover {
-  background: rgb(115, 115, 115)
+  background: #737373
 }

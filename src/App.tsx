@@ -1,60 +1,12 @@
-import GoLang_Icon from "./assets/icons/GoLang.svg";
-import Sass_Icon from "./assets/icons/Sass.svg";
-import Netlify_Icon from "./assets/icons/Netlify-Light.svg";
-import Markdown_Icon from "./assets/icons/Markdown-Light.svg";
-import HTML_Icon from "./assets/icons/HTML.svg";
-import CSS_Icon from "./assets/icons/CSS.svg";
-import JS_Icon from "./assets/icons/JavaScript.svg";
-import TS_Icon from "./assets/icons/TypeScript.svg";
-import TailwindCSS_Icon from "./assets/icons/TailwindCSS-Light.svg";
-import Vite_Icon from "./assets/icons/Vite-Light.svg";
-import React_Icon from "./assets/icons/React-Light.svg";
-import Firebase_Icon from "./assets/icons/Firebase-Light.svg";
-import Github_Icon from "./assets/icons/Github-Light.svg";
-import GithubActions_Icon from "./assets/icons/GithubActions-Light.svg";
-import VSCode_Icon from "./assets/icons/VSCode-Light.svg";
+import Navbar from "./components/navbar/Navbar";
+import NotesSidebar from "./components/notes-sidebar/NotesSidebar";
 
 function App() {
   return (
     <div className="min-h-screen bg-neutral-800">
-      <nav className="bg-neutral-900 rounded-lg fixed h-8 top-2 left-4 right-4 px-1 flex justify-between ">
-        {/* left Side  */}
-        <div className="h-full flex items-center justify-self-start">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="#0a0a0a"
-            className="w-6 h-6 bg-neutral-300 px-1 rounded-lg mr-2"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-            />
-          </svg>
-        </div>
-        <div className="w-fit flex h-full gap-2 py-1">
-          <img src={GoLang_Icon} alt="" />
-          <img src={Sass_Icon} alt="" />
-          <img src={Netlify_Icon} alt="" />
-          <img src={Markdown_Icon} alt="" />
-          <img src={HTML_Icon} alt="" />
-          <img src={CSS_Icon} alt="" />
-          <img src={JS_Icon} alt="" />
-          <img src={TS_Icon} alt="" />
-          <img src={TailwindCSS_Icon} alt="" />
-          <img src={Vite_Icon} alt="" />
-          <img src={React_Icon} alt="" />
-          <img src={Firebase_Icon} alt="" />
-          <img src={Github_Icon} alt="" />
-          <img src={GithubActions_Icon} alt="" />
-          <img src={VSCode_Icon} alt="" />
-        </div>
-      </nav>
-      <main className="w-full min-h-screen pt-12 max-w-7xl mx-auto pl-64 pr-64 selection:bg-neutral-600 selection:text-neutral-200">
-        <article className="bg-neutral-200 w-full min-h-96 rounded-lg p-6">
+      <Navbar />
+      <main className=" min-h-screen pt-12 pl-64 pr-64  selection:bg-neutral-600 selection:text-neutral-200 bg-green">
+        <article className="bg-neutral-200 w-full min-h-96 rounded-lg p-6 max-w-3xl mx-auto">
           {/* Section Banner  */}
           <div className="mb-4">
             <img
@@ -65,26 +17,28 @@ function App() {
           </div>
 
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio
-            amet eum autem quae. Fuga sequi sint corporis. Quasi ad iste
-            consequuntur quo animi necessitatibus earum porro illo cumque, id,
-            velit, error cum. In quod corrupti deleniti minima voluptatum
-            consequatur minus vitae recusandae porro blanditiis exercitationem
-            et hic saepe ab, provident laboriosam, similique adipisci alias,
-            quis repellat! Natus obcaecati totam quo nobis error earum,
-            provident, eveniet quaerat corporis culpa aliquam, numquam quas
-            minus voluptas voluptatem ut harum beatae quam facere illum magni
-            voluptatum. Expedita iusto quae distinctio assumenda dolor deserunt
-            rerum laboriosam nesciunt consequatur quis? Recusandae impedit
-            delectus, quod repellat quibusdam aut inventore veritatis. Aliquid
-            dicta, ab consequatur molestias sunt, dolor magnam quaerat inventore
-            maiores voluptatibus voluptatum quasi quos illum officia cupiditate
-            accusantium, possimus numquam sequi! Harum dolores rerum natus, est
-            nulla dignissimos non ab sed nemo vero at, doloribus repudiandae
-            reiciendis? Aut sed quo sunt asperiores aliquam nesciunt, qui
-            sapiente voluptatum optio corporis, minima ratione. Molestias
-            asperiores voluptates est minima harum, ipsum, in eaque ratione
-            necessitatibus dolorum quisquam alias vero quo pariatur ab!
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto
+            eligendi quod perferendis eaque repellendus iste dolor neque maiores
+            repellat quasi? Lorem ipsum dolor, sit amet consectetur adipisicing
+            elit. Distinctio amet eum autem quae. Fuga sequi sint corporis.
+            Quasi ad iste consequuntur quo animi necessitatibus earum porro illo
+            cumque, id, velit, error cum. In quod corrupti deleniti minima
+            voluptatum consequatur minus vitae recusandae porro blanditiis
+            exercitationem et hic saepe ab, provident laboriosam, similique
+            adipisci alias, quis repellat! Natus obcaecati totam quo nobis error
+            earum, provident, eveniet quaerat corporis culpa aliquam, numquam
+            quas minus voluptas voluptatem ut harum beatae quam facere illum
+            magni voluptatum. Expedita iusto quae distinctio assumenda dolor
+            deserunt rerum laboriosam nesciunt consequatur quis? Recusandae
+            impedit delectus, quod repellat quibusdam aut inventore veritatis.
+            Aliquid dicta, ab consequatur molestias sunt, dolor magnam quaerat
+            inventore maiores voluptatibus voluptatum quasi quos illum officia
+            cupiditate accusantium, possimus numquam sequi! Harum dolores rerum
+            natus, est nulla dignissimos non ab sed nemo vero at, doloribus
+            repudiandae reiciendis? Aut sed quo sunt asperiores aliquam
+            nesciunt, qui sapiente voluptatum optio corporis, minima ratione.
+            Molestias asperiores voluptates est minima harum, ipsum, in eaque
+            ratione necessitatibus dolorum quisquam alias vero quo pariatur ab!
             Voluptatem harum laudantium, molestiae odio aliquid voluptatum!
             Quod, rem nihil odit impedit vitae asperiores omnis doloremque
             placeat error optio fugit vero architecto distinctio quibusdam?
@@ -230,144 +184,32 @@ function App() {
               alt=""
             />
           </div>
+
+          <div className="  w-[48rem] flex justify-end items-end p-1 h-[8rem] fixed left-1/2 bottom-1 -translate-x-1/2">
+            <button className="bg-neutral-950 rounded-full p-1  ">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.7}
+                stroke="#fafafa"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z"
+                />
+              </svg>
+            </button>
+          </div>
         </article>
       </main>
       {/* sideBar Content [Start] */}
       <div className=" bg-neutral-700 h-[calc(100%-4rem)] w-56 fixed right-4 top-12 bottom-4 rounded-lg"></div>
       {/* sideBar Content [End] */}
 
-      {/* sideBar Section [Start] */}
-      <div className="bg-neutral-950 pr-1.5 h-[calc(100%-4rem)] fixed overflow-hidden left-4 top-12 bottom-4 rounded-lg">
-        <aside className="h-full  w-56 p-2 overflow-y-auto">
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit amet.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit amet.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit amet.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit amet.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit amet.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit amet.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit amet.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit amet.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit amet.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit amet.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit amet.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit amet.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit amet.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit amet.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit amet.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit amet.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit amet.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit amet.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit amet.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit amet.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit amet.
-          </p>
-          <p className="text-neutral-50 font-semibold my-2 ">
-            Lorem ipsum dolor sit.
-          </p>
-        </aside>
-      </div>
-      {/* sideBar Section [End] */}
+      <NotesSidebar />
     </div>
   );
 }
