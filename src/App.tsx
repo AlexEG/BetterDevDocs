@@ -1,16 +1,32 @@
+import GoLang_Icon from "./assets/icons/GoLang.svg";
+import Sass_Icon from "./assets/icons/Sass.svg";
+import Netlify_Icon from "./assets/icons/Netlify-Light.svg";
+import Markdown_Icon from "./assets/icons/Markdown-Light.svg";
+import HTML_Icon from "./assets/icons/HTML.svg";
+import CSS_Icon from "./assets/icons/CSS.svg";
+import JS_Icon from "./assets/icons/JavaScript.svg";
+import TS_Icon from "./assets/icons/TypeScript.svg";
+import TailwindCSS_Icon from "./assets/icons/TailwindCSS-Light.svg";
+import Vite_Icon from "./assets/icons/Vite-Light.svg";
+import React_Icon from "./assets/icons/React-Light.svg";
+import Firebase_Icon from "./assets/icons/Firebase-Light.svg";
+import Github_Icon from "./assets/icons/Github-Light.svg";
+import GithubActions_Icon from "./assets/icons/GithubActions-Light.svg";
+import VSCode_Icon from "./assets/icons/VSCode-Light.svg";
+
 function App() {
   return (
     <div className="min-h-screen bg-neutral-800">
-      <nav className="bg-neutral-900 rounded-lg fixed h-8 top-2 left-4 right-4 px-1">
+      <nav className="bg-neutral-900 rounded-lg fixed h-8 top-2 left-4 right-4 px-1 flex justify-between ">
         {/* left Side  */}
-        <div className="h-full flex items-center">
+        <div className="h-full flex items-center justify-self-start">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="#0a0a0a"
-            className="w-6 h-6 bg-neutral-300 px-1 rounded-lg"
+            className="w-6 h-6 bg-neutral-300 px-1 rounded-lg mr-2"
           >
             <path
               strokeLinecap="round"
@@ -18,6 +34,23 @@ function App() {
               d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
             />
           </svg>
+        </div>
+        <div className="w-fit flex h-full gap-2 py-1">
+          <img src={GoLang_Icon} alt="" />
+          <img src={Sass_Icon} alt="" />
+          <img src={Netlify_Icon} alt="" />
+          <img src={Markdown_Icon} alt="" />
+          <img src={HTML_Icon} alt="" />
+          <img src={CSS_Icon} alt="" />
+          <img src={JS_Icon} alt="" />
+          <img src={TS_Icon} alt="" />
+          <img src={TailwindCSS_Icon} alt="" />
+          <img src={Vite_Icon} alt="" />
+          <img src={React_Icon} alt="" />
+          <img src={Firebase_Icon} alt="" />
+          <img src={Github_Icon} alt="" />
+          <img src={GithubActions_Icon} alt="" />
+          <img src={VSCode_Icon} alt="" />
         </div>
       </nav>
       <main className="w-full min-h-screen pt-12 max-w-7xl mx-auto pl-64 pr-64 selection:bg-neutral-600 selection:text-neutral-200">
