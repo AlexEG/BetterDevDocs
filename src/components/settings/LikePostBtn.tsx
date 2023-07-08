@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function LikePostBtn({ animation }) {
+function LikePostBtn({ animation }: { animation: string }) {
   const [isLiked, setIsLike] = useState(false);
   function likeUnlikePost() {
     setIsLike((prev) => !prev);

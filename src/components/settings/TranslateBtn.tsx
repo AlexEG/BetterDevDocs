@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import TranslateBtnFlag from "./TranslateBtnFlag";
 
-function TranslateBtn({ animation }) {
+function TranslateBtn({ animation }: { animation: string }) {
   const [isSelectBarOpen, setIsSelecBarOpen] = useState(false);
 
   function openCloseSelectLangBar() {
@@ -16,7 +16,6 @@ function TranslateBtn({ animation }) {
     setSelectedLanguage(lang);
     return;
   }
-
   return (
     <div className="relative">
       {isSelectBarOpen && (
