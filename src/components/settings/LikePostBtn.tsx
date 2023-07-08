@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function LikePostBtn() {
+function LikePostBtn({ animation }) {
   const [isLiked, setIsLike] = useState(false);
   function likeUnlikePost() {
     setIsLike((prev) => !prev);
@@ -11,7 +11,7 @@ function LikePostBtn() {
   return (
     <button
       onClick={likeUnlikePost}
-      className={`bg-neutral-950 rounded-full p-1 relative w-8 h-8`}
+      className={`bg-neutral-950 rounded-full p-1 w-8 h-8 ${animation}`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

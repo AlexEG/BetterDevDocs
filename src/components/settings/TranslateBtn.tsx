@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import TranslateBtnFlag from "./TranslateBtnFlag";
 
-function TranslateBtn() {
+function TranslateBtn({ animation }) {
   const [isSelectBarOpen, setIsSelecBarOpen] = useState(false);
 
   function openCloseSelectLangBar() {
@@ -49,7 +49,7 @@ function TranslateBtn() {
         onClick={openCloseSelectLangBar}
         className={`bg-neutral-950 ${
           isSelectBarOpen ? " rounded-b-full" : "rounded-full"
-        } w-8 h-8 `}
+        } w-8 h-8 ${animation}`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
