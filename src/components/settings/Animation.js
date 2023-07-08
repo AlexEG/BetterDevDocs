@@ -15,14 +15,16 @@ export const openPointingIn = {
 export const closePointingIn = {
   "80%": { opacity: "1" },
   "100%": {
+    opacity: "0",
     visibility: "hidden",
     transform: "translateX(100%)",
   },
 };
+
 // animation2
 export const openPointingOut = {
   "0%": {
-    transform: "translateX(200%)",
+    transform: "translateX(210%)",
     opacity: "0",
   },
   "20%": {
@@ -33,17 +35,18 @@ export const openPointingOut = {
   },
 };
 export const closePointingOut = {
-  "0%": {},
+  "80%": { opacity: "1" },
   "100%": {
+    opacity: "0",
     visibility: "hidden",
-    transform: "translateX(200%)",
+    transform: "translateX(210%)",
   },
 };
 
 // animation3
 export const openTranslateBtn = {
   "0%": {
-    transform: "translateX(300%)",
+    transform: "translateX(320%)",
     opacity: "0",
   },
   "20%": {
@@ -54,17 +57,18 @@ export const openTranslateBtn = {
   },
 };
 export const closeTranslateBtn = {
-  "0%": {},
+  "80%": { opacity: "1" },
   "100%": {
+    opacity: "0",
     visibility: "hidden",
-    transform: "translateX(300%)",
+    transform: "translateX(320%)",
   },
 };
 
 // animation4
 export const openLikePostBtn = {
   "0%": {
-    transform: "translateX(400%)",
+    transform: "translateX(430%)",
     opacity: "0",
   },
   "20%": {
@@ -75,9 +79,10 @@ export const openLikePostBtn = {
   },
 };
 export const closeLikePostBtn = {
-  "0%": {},
+  "80%": { opacity: "1" },
   "100%": {
+    opacity: "0",
     visibility: "hidden",
-    transform: "translateX(400%)",
+    transform: "translateX(430%)",
   },
 };

@@ -31,9 +31,9 @@ function LikePostBtn({ animation }: { animation: string }) {
         xmlns="http://www.w3.org/2000/svg"
         fill={isLiked ? "#eb1a54" : "none"}
         viewBox="0 0 24 24"
-        strokeWidth={0.3}
+        strokeWidth={isLiked ? 1.5 : 0}
         stroke={isLiked ? "#eb1a54" : "#fafafa00"}
-        className={`w-6 h-6 p-px absolute top-[3.5px]`}
+        className={`w-6 h-6 p-px absolute top-[4.2px]`}
       >
         <path
           strokeLinecap="round"

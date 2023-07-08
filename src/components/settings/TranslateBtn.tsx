@@ -2,11 +2,35 @@ import { useState } from "react";
 
 import TranslateBtnFlag from "./TranslateBtnFlag";
 
-function TranslateBtn({ animation }: { animation: string }) {
-  const [isSelectBarOpen, setIsSelecBarOpen] = useState(false);
-
+function TranslateBtn({
+  animation,
+  isOpen,
+  isSelectLanguageOpen,
+  setIsOpen,
+}: {
+  animation: string;
+  isOpen: boolean;
+  isSelectLanguageOpen: boolean;
+  setIsOpen: React.Dispatch<
+    React.SetStateAction<{
+      Open: boolean;
+      animation1: string;
+      animation2: string;
+      animation3: string;
+      animation4: string;
+      isSelectLanguageOpen: boolean;
+    }>
+  >;
+}) {
   function openCloseSelectLangBar() {
-    setIsSelecBarOpen((prev) => !prev);
+    setIsOpen((prevState) => {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+      return {
+        ...prevState,
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+        isSelectLanguageOpen: !prevState.isSelectLanguageOpen,
+      };
+    });
   }
   // english japanese german french
 
@@ -18,7 +42,7 @@ function TranslateBtn({ animation }: { animation: string }) {
   }
   return (
     <div className="relative">
-      {isSelectBarOpen && (
+      {isSelectLanguageOpen && (
         <div className="absolute w-full bg-neutral-950 flex flex-col gap-2 items-center py-2 bottom-8 rounded-t-full">
           <TranslateBtnFlag
             lang="english"
@@ -47,7 +71,7 @@ function TranslateBtn({ animation }: { animation: string }) {
       <button
         onClick={openCloseSelectLangBar}
         className={`bg-neutral-950 ${
-          isSelectBarOpen ? " rounded-b-full" : "rounded-full"
+          isSelectLanguageOpen && isOpen ? " rounded-b-full" : "rounded-full"
         } w-8 h-8 ${animation}`}
       >
         <svg

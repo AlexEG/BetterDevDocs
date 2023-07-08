@@ -11,6 +11,7 @@ function SettingsBtn() {
     animation2: "invisible",
     animation3: "invisible",
     animation4: "invisible",
+    isSelectLanguageOpen: false,
   });
 
   const openPointingIn =
@@ -58,6 +59,7 @@ function SettingsBtn() {
           prevState.animation4 === closeLikePostBtn
             ? openLikePostBtn
             : closeLikePostBtn,
+        isSelectLanguageOpen: false,
       };
     });
   }
@@ -87,7 +89,12 @@ function SettingsBtn() {
 
         <ExpandShrinkBtn animation={isOpen.animation1} />
         <LightDarkBtn animation={isOpen.animation2} />
-        <TranslateBtn animation={isOpen.animation3} />
+        <TranslateBtn
+          animation={isOpen.animation3}
+          isOpen={isOpen.Open}
+          isSelectLanguageOpen={isOpen.isSelectLanguageOpen}
+          setIsOpen={setIsOpen}
+        />
         <LikePostBtn animation={isOpen.animation4} />
       </div>
     </div>
