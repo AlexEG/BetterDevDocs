@@ -23,22 +23,6 @@ function Navbar() {
 
       <div className="w-fit flex h-full gap-2 py-1">
         <LanguagesTools />
-
-        {/* <img src={Icons.GoLang_Icon} alt="" />
-        <img src={Icons.Sass_Icon} alt="" />
-        <img src={Icons.Netlify_Icon} alt="" />
-        <img src={Icons.Markdown_Icon} alt="" />
-        <img src={Icons.HTML_Icon} alt="" />
-        <img src={Icons.CSS_Icon} alt="" />
-        <img src={Icons.JS_Icon} alt="" />
-        <img src={Icons.TS_Icon} alt="" />
-        <img src={Icons.TailwindCSS_Icon} alt="" />
-        <img src={Icons.Vite_Icon} alt="" />
-        <img src={Icons.React_Icon} alt="" />
-        <img src={Icons.Firebase_Icon} alt="" />
-        <img src={Icons.Github_Icon} alt="" />
-        <img src={Icons.GithubActions_Icon} alt="" />
-        <img src={Icons.VSCode_Icon} alt="" /> */}
       </div>
     </nav>
   );

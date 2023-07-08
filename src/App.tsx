@@ -1,5 +1,6 @@
 import Navbar from "./components/navbar/Navbar";
 import NotesSidebar from "./components/notes-sidebar/NotesSidebar";
+import SettingsBtn from "./components/settings/SettingsBtn";
 
 function App() {
   return (
@@ -184,25 +185,7 @@ function App() {
               alt=""
             />
           </div>
-
-          <div className="  w-[48rem] flex justify-end items-end p-1 h-[8rem] fixed left-1/2 bottom-1 -translate-x-1/2">
-            <button className="bg-neutral-950 rounded-full p-1  ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.7}
-                stroke="#fafafa"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z"
-                />
-              </svg>
-            </button>
-          </div>
+          <SettingsBtn />
         </article>
       </main>
       {/* sideBar Content [Start] */}

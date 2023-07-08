@@ -13,7 +13,12 @@ function LanguagesTools(): JSX.Element[] {
   allLanguagesToolsIconsArrTitle.map((icon, i) => {
     if (dataArr.includes(icon)) {
       iconsArr.push(
-        <img key={icon} src={allLanguagesToolsIconsArr[i]} alt={icon} />
+        <img
+          className=" brightness-50 hover:brightness-110 transition cursor-pointer"
+          key={icon}
+          src={allLanguagesToolsIconsArr[i]}
+          alt={icon}
+        />
       );
     }
   });
