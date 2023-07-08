@@ -9,7 +9,7 @@ function SettingsBtn() {
     setIsOpen((prev) => !prev);
   }
   return (
-    <div className="w-[48rem] flex justify-end items-end p-1 h-[8rem] fixed left-1/2 bottom-1 -translate-x-1/2">
+    <div className="w-[48rem] flex justify-end items-end p-1 h-[8rem] fixed left-1/2 bottom-1 -translate-x-1/2 bg-sky-700">
       <div className="flex gap-1  flex-row-reverse">
         <button
           onClick={openCloseSettings}
