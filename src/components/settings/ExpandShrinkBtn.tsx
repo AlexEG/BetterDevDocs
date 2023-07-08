@@ -1,6 +1,10 @@
 import { useState } from "react";
 
-function ExpandShrinkBtn({ animation }: { animation: string }) {
+function ExpandShrinkBtn({
+  openCloseAnimation,
+}: {
+  openCloseAnimation: string;
+}) {
   const expand = (
     <path
       strokeLinecap="round"
@@ -17,14 +21,14 @@ function ExpandShrinkBtn({ animation }: { animation: string }) {
   );
 
   const [isExpand, setisExpand] = useState(false);
-
   function changeIsExpand() {
     setisExpand((prev) => !prev);
   }
+
   return (
     <button
       onClick={changeIsExpand}
-      className={`bg-neutral-950 rounded-full p-1 w-8 h-8 ${animation}`}
+      className={`bg-neutral-950 rounded-full p-1 w-8 h-8 ${openCloseAnimation} translate-x-[110%]`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

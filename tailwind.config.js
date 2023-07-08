@@ -1,33 +1,24 @@
 /** @type {import('tailwindcss').Config} */
 
 //* ----------[ Settings Bar ]---------- *//
-import { openPointingIn } from "./src/components/settings/Animation";
-import { closePointingIn } from "./src/components/settings/Animation";
-import { openPointingOut } from "./src/components/settings/Animation";
-import { closePointingOut } from "./src/components/settings/Animation";
-import { openTranslateBtn } from "./src/components/settings/Animation";
-import { closeTranslateBtn } from "./src/components/settings/Animation";
-import { openLikePostBtn } from "./src/components/settings/Animation";
-import { closeLikePostBtn } from "./src/components/settings/Animation";
+import { openSettingsBar } from "./src/components/settings/Animation";
+import { closeSettingsBar } from "./src/components/settings/Animation";
 //* ---------- ---------- *//
+//* ----------[ Languages Bar ]---------- *//
+
 import { openLang } from "./src/components/settings/Animation";
 import { closeLang } from "./src/components/settings/Animation";
 import { closeLangContainer } from "./src/components/settings/Animation";
 import { openLangContainer } from "./src/components/settings/Animation";
+//* ---------- ---------- *//
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       keyframes: {
-        openPointingIn,
-        closePointingIn,
-        openPointingOut,
-        closePointingOut,
-        openTranslateBtn,
-        closeTranslateBtn,
-        openLikePostBtn,
-        closeLikePostBtn,
+        openSettingsBar,
+        closeSettingsBar,
         openLang,
         closeLang,
         closeLangContainer,

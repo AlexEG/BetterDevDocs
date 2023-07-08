@@ -7,59 +7,22 @@ import ExpandShrinkBtn from "./ExpandShrinkBtn";
 function SettingsBtn() {
   const [isOpen, setIsOpen] = useState({
     Open: false,
-    animation1: "invisible",
-    animation2: "invisible",
-    animation3: "invisible",
-    animation4: "invisible",
+    openCloseAnimation: "invisible",
     isSelectLanguageOpen: false,
   });
 
-  const openPointingIn =
-    "animate-[openPointingIn_500ms_ease-in-out_1_forwards]";
-  const closePointingIn =
-    "animate-[closePointingIn_500ms_ease-in-out_1_forwards]";
-
-  const openPointingOut =
-    "animate-[openPointingOut_500ms_ease-in-out_1_forwards]";
-  const closePointingOut =
-    "animate-[closePointingOut_500ms_ease-in-out_1_forwards]";
-
-  const openTranslateBtn =
-    "animate-[openTranslateBtn_500ms_ease-in-out_1_forwards]";
-  const closeTranslateBtn =
-    "animate-[closeTranslateBtn_500ms_ease-in-out_1_forwards]";
-
-  const openLikePostBtn =
-    "animate-[openLikePostBtn_500ms_ease-in-out_1_forwards]";
-  const closeLikePostBtn =
-    "animate-[closeLikePostBtn_500ms_ease-in-out_1_forwards]";
+  const openSettingsBar =
+    "animate-[openSettingsBar_500ms_ease-in-out_1_forwards]";
+  const closeSettingsBar =
+    "animate-[closeSettingsBar_500ms_ease-in-out_1_forwards_reverse]";
 
   function openCloseSettings() {
     setIsOpen((prevState) => {
       return {
         ...prevState,
         Open: !prevState.Open,
-        animation1:
-          prevState.animation1 === "invisible" ||
-          prevState.animation1 === closePointingIn
-            ? openPointingIn
-            : closePointingIn,
-        animation2:
-          prevState.animation2 === "invisible" ||
-          prevState.animation2 === closePointingOut
-            ? openPointingOut
-            : closePointingOut,
-        animation3:
-          prevState.animation3 === "invisible" ||
-          prevState.animation3 === closeTranslateBtn
-            ? openTranslateBtn
-            : closeTranslateBtn,
-        animation4:
-          prevState.animation4 === "invisible" ||
-          prevState.animation4 === closeLikePostBtn
-            ? openLikePostBtn
-            : closeLikePostBtn,
         isSelectLanguageOpen: false,
+        openCloseAnimation: isOpen.Open ? closeSettingsBar : openSettingsBar,
       };
     });
   }
@@ -69,7 +32,7 @@ function SettingsBtn() {
       <div className="flex gap-1 flex-row-reverse">
         <button
           onClick={openCloseSettings}
-          className="bg-neutral-950 rounded-full p-1 w-8 h-8 "
+          className="bg-neutral-950 rounded-full p-1 w-8 h-8 z-10"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -87,15 +50,18 @@ function SettingsBtn() {
           </svg>
         </button>
 
-        <ExpandShrinkBtn animation={isOpen.animation1} />
-        <LightDarkBtn animation={isOpen.animation2} />
+        <ExpandShrinkBtn openCloseAnimation={isOpen.openCloseAnimation} />
+
+        <LightDarkBtn openCloseAnimation={isOpen.openCloseAnimation} />
+
         <TranslateBtn
-          animation={isOpen.animation3}
+          openCloseAnimation={isOpen.openCloseAnimation}
           isOpen={isOpen.Open}
           isSelectLanguageOpen={isOpen.isSelectLanguageOpen}
           setIsOpen={setIsOpen}
         />
-        <LikePostBtn animation={isOpen.animation4} />
+
+        <LikePostBtn openCloseAnimation={isOpen.openCloseAnimation} />
       </div>
     </div>
   );

@@ -1,94 +1,34 @@
 //* ----------[ Settings Bar ]---------- *//
-// animation1
-export const openPointingIn = {
+export const openSettingsBar = {
   "0%": {
-    transform: "translateX(100%)",
     opacity: "0",
+    visibility: "visible",
   },
   "20%": {
     opacity: "1",
   },
 
   "100%": {
-    visibility: "visible",
-  },
-};
-export const closePointingIn = {
-  "80%": { opacity: "1" },
-  "100%": {
-    opacity: "0",
-    visibility: "hidden",
-    transform: "translateX(100%)",
+    transform: "translateX(0%)",
   },
 };
 
-// animation2
-export const openPointingOut = {
+export const closeSettingsBar = {
   "0%": {
-    transform: "translateX(210%)",
     opacity: "0",
+    visibility: "hidden",
   },
   "20%": {
     opacity: "1",
   },
-  "100%": {
-    visibility: "visible",
-  },
-};
-export const closePointingOut = {
-  "80%": { opacity: "1" },
-  "100%": {
-    opacity: "0",
-    visibility: "hidden",
-    transform: "translateX(210%)",
-  },
-};
 
-// animation3
-export const openTranslateBtn = {
-  "0%": {
-    transform: "translateX(320%)",
-    opacity: "0",
-  },
-  "20%": {
-    opacity: "1",
-  },
   "100%": {
-    visibility: "visible",
-  },
-};
-export const closeTranslateBtn = {
-  "80%": { opacity: "1" },
-  "100%": {
-    opacity: "0",
-    visibility: "hidden",
-    transform: "translateX(320%)",
-  },
-};
-
-// animation4
-export const openLikePostBtn = {
-  "0%": {
-    transform: "translateX(430%)",
-    opacity: "0",
-  },
-  "20%": {
-    opacity: "1",
-  },
-  "100%": {
-    visibility: "visible",
-  },
-};
-export const closeLikePostBtn = {
-  "80%": { opacity: "1" },
-  "100%": {
-    opacity: "0",
-    visibility: "hidden",
-    transform: "translateX(430%)",
+    transform: "translateX(0%)",
   },
 };
 //* ---------- ---------- *//
 
+//* ----------[ Languages Bar ]---------- *//
 export const openLang = {
   "0%": {
     opacity: "0",
@@ -125,3 +65,4 @@ export const closeLangContainer = {
     transform: "scaleY(0)",
   },
 };
+//* ---------- ---------- *//

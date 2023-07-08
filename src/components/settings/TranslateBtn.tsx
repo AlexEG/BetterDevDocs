@@ -3,24 +3,21 @@ import { useState } from "react";
 import TranslateBtnFlag from "./TranslateBtnFlag";
 
 function TranslateBtn({
-  animation,
+  openCloseAnimation,
   isOpen,
   isSelectLanguageOpen,
   setIsOpen,
 }: {
-  animation: string;
   isOpen: boolean;
   isSelectLanguageOpen: boolean;
   setIsOpen: React.Dispatch<
     React.SetStateAction<{
       Open: boolean;
-      animation1: string;
-      animation2: string;
-      animation3: string;
-      animation4: string;
+      openCloseAnimation: string;
       isSelectLanguageOpen: boolean;
     }>
   >;
+  openCloseAnimation: string;
 }) {
   function openCloseSelectLangBar() {
     setIsOpen((prevState) => {
@@ -32,14 +29,14 @@ function TranslateBtn({
       };
     });
   }
+
   // english japanese german french
-
   const [selectedLanguage, setSelectedLanguage] = useState("english");
-
   function selectLang(lang: string) {
     setSelectedLanguage(lang);
     return;
   }
+
   return (
     <div className="relative">
       <div
@@ -47,7 +44,9 @@ function TranslateBtn({
           !isSelectLanguageOpen
             ? "animate-[closeLangContainer_200ms_linear_1_forwards_500ms]"
             : "animate-[openLangContainer_200ms_linear_1_forwards]"
-        }  origin-bottom`}
+        }  origin-bottom ${
+          openCloseAnimation === "invisible" ? "invisible" : ""
+        } `}
       >
         <TranslateBtnFlag
           lang="english"
@@ -82,7 +81,7 @@ function TranslateBtn({
           isSelectLanguageOpen && isOpen
             ? "rounded-b-full "
             : "rounded-full delay-700 transition-all "
-        } w-8 h-8 ${animation} `}
+        } w-8 h-8 ${openCloseAnimation} translate-x-[330%]`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

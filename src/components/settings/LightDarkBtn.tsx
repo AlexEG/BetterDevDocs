@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function LightDarkBtn({ animation }: { animation: string }) {
+function LightDarkBtn({ openCloseAnimation }: { openCloseAnimation: string }) {
   const darkMode = (
     <path
       strokeLinecap="round"
@@ -21,10 +21,11 @@ function LightDarkBtn({ animation }: { animation: string }) {
   function changeMode() {
     setCurrentMode((prevMode) => !prevMode);
   }
+
   return (
     <button
       onClick={changeMode}
-      className={`bg-neutral-950 rounded-full p-1 w-8 h-8 ${animation}`}
+      className={`bg-neutral-950 rounded-full p-1 w-8 h-8 ${openCloseAnimation} translate-x-[220%]`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
