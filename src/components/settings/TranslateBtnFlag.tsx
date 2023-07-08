@@ -2,16 +2,30 @@ function TranslateBtnFlag({
   lang,
   selectedLanguage,
   selectLang,
+  isSelectLanguageOpen,
 }: {
   lang: string;
   selectedLanguage: string;
   selectLang: any;
+  isSelectLanguageOpen: boolean;
 }) {
+  const openLang = "animate-[openLang_500ms_ease-in-out_1_forwards]";
+  const closeLang = "animate-[closeLang_500ms_ease-in-out_1_forwards_reverse]";
+
+  const openLangAnimation =
+    lang === "english"
+      ? "translate-y-[540%]"
+      : lang === "japanese"
+      ? "translate-y-[390%]"
+      : lang === "german"
+      ? "translate-y-[260%]"
+      : "translate-y-[130%]";
+
   return (
     <button
-      className={`rounded-full overflow-hidden ${
+      className={`rounded-full overflow-hidden  ${
         selectedLanguage === lang ? "brightness-110" : "brightness-50"
-      } `}
+      } ${isSelectLanguageOpen ? openLang : closeLang} ${openLangAnimation}`}
       data-lang={lang}
       data-selected-lang={selectedLanguage === lang ? "true" : "false"}
       // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-call

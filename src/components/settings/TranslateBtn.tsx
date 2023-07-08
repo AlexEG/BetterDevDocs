@@ -42,37 +42,47 @@ function TranslateBtn({
   }
   return (
     <div className="relative">
-      {isSelectLanguageOpen && (
-        <div className="absolute w-full bg-neutral-950 flex flex-col gap-2 items-center py-2 bottom-8 rounded-t-full">
-          <TranslateBtnFlag
-            lang="english"
-            selectedLanguage={selectedLanguage}
-            selectLang={selectLang}
-          />
-          <TranslateBtnFlag
-            lang="japanese"
-            selectedLanguage={selectedLanguage}
-            selectLang={selectLang}
-          />
-          <TranslateBtnFlag
-            lang="german"
-            selectedLanguage={selectedLanguage}
-            selectLang={selectLang}
-          />
-          <TranslateBtnFlag
-            lang="french"
-            selectedLanguage={selectedLanguage}
-            selectLang={selectLang}
-          />
-        </div>
-      )}
+      <div
+        className={`absolute w-full bg-neutral-950 flex flex-col gap-2 items-center py-2 bottom-8 rounded-t-full  ${
+          !isSelectLanguageOpen
+            ? "animate-[closeLangContainer_200ms_linear_1_forwards_500ms]"
+            : "animate-[openLangContainer_200ms_linear_1_forwards]"
+        }  origin-bottom`}
+      >
+        <TranslateBtnFlag
+          lang="english"
+          selectedLanguage={selectedLanguage}
+          selectLang={selectLang}
+          isSelectLanguageOpen={isSelectLanguageOpen}
+        />
+        <TranslateBtnFlag
+          lang="japanese"
+          selectedLanguage={selectedLanguage}
+          selectLang={selectLang}
+          isSelectLanguageOpen={isSelectLanguageOpen}
+        />
+        <TranslateBtnFlag
+          lang="german"
+          selectedLanguage={selectedLanguage}
+          selectLang={selectLang}
+          isSelectLanguageOpen={isSelectLanguageOpen}
+        />
+        <TranslateBtnFlag
+          lang="french"
+          selectedLanguage={selectedLanguage}
+          selectLang={selectLang}
+          isSelectLanguageOpen={isSelectLanguageOpen}
+        />
+      </div>
 
       {/* Main Btn  */}
       <button
         onClick={openCloseSelectLangBar}
         className={`bg-neutral-950 ${
-          isSelectLanguageOpen && isOpen ? " rounded-b-full" : "rounded-full"
-        } w-8 h-8 ${animation}`}
+          isSelectLanguageOpen && isOpen
+            ? "rounded-b-full "
+            : "rounded-full delay-700 transition-all "
+        } w-8 h-8 ${animation} `}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

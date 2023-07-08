@@ -10,6 +10,10 @@ import { closeTranslateBtn } from "./src/components/settings/Animation";
 import { openLikePostBtn } from "./src/components/settings/Animation";
 import { closeLikePostBtn } from "./src/components/settings/Animation";
 //* ---------- ---------- *//
+import { openLang } from "./src/components/settings/Animation";
+import { closeLang } from "./src/components/settings/Animation";
+import { closeLangContainer } from "./src/components/settings/Animation";
+import { openLangContainer } from "./src/components/settings/Animation";
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -24,6 +28,10 @@ export default {
         closeTranslateBtn,
         openLikePostBtn,
         closeLikePostBtn,
+        openLang,
+        closeLang,
+        closeLangContainer,
+        openLangContainer,
       },
     },
   },
