@@ -41,9 +41,9 @@ function TranslateBtn({
     <div className="relative">
       <div
         className={`absolute w-full bg-neutral-950 flex flex-col gap-2 items-center py-2 bottom-8 rounded-t-full  ${
-          !isSelectLanguageOpen
-            ? "animate-[closeLangContainer_200ms_linear_1_forwards_500ms]"
-            : "animate-[openLangContainer_200ms_linear_1_forwards]"
+          isSelectLanguageOpen && isOpen
+            ? "animate-[openLangContainer_200ms_linear_1_forwards]"
+            : "animate-[closeLangContainer_200ms_linear_1_forwards_500ms]"
         }  origin-bottom ${
           openCloseAnimation === "invisible" ? "invisible" : ""
         } `}

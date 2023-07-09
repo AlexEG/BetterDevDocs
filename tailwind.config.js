@@ -24,6 +24,10 @@ export default {
         closeLangContainer,
         openLangContainer,
       },
+      dropShadow: {
+        imageDownloadBtn: "0 0 10px rgba(147 51 234 / 1)",
+        imageDownloadBtnDownloaded: "0 0 10px rgba(5 150 105 / 1)",
+      },
     },
   },
   plugins: [],
