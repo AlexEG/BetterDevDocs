@@ -15,17 +15,19 @@ import img9 from "../../assets/test images/Screenshot_8.png";
 import { useState } from "react";
 function Post() {
   const [postState, setPostState] = useState({
-    DarkMode: true,
+    DarkMode: false,
+    isExpand: false,
   });
 
+  const postWidth = postState.isExpand ? "max-w-7xl" : "max-w-3xl";
   const PostDarkMode = postState.DarkMode
-    ? "bg-neutral-200 selection:bg-neutral-600 selection:text-neutral-200"
-    : "bg-black text-neutral-200 selection:bg-neutral-200 selection:text-neutral-950";
+    ? "bg-black text-neutral-200 selection:bg-neutral-200 selection:text-neutral-950"
+    : "bg-neutral-200 selection:bg-neutral-600 selection:text-neutral-200";
 
   return (
     <main className=" min-h-screen pt-12 pl-64 pr-64  ">
       <article
-        className={`w-full min-h-screen rounded-lg p-6 max-w-3xl mx-auto  ${PostDarkMode}  transition-colors duration-500 delay-75`}
+        className={`w-full min-h-screen rounded-lg p-6 mx-auto transition-all duration-500 delay-75 ${postWidth} ${PostDarkMode}`}
       >
         {/* /////////// */}
         <Img src={img7} />
@@ -54,8 +56,8 @@ function Post() {
           ]}
         />
         {/* /////////// */}
+        <SettingsBtn setPostState={setPostState} />
       </article>
-      <SettingsBtn setPostState={setPostState} />
     </main>
   );
 }

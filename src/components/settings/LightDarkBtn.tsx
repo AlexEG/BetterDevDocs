@@ -8,6 +8,7 @@ function LightDarkBtn({
   setPostState: React.Dispatch<
     React.SetStateAction<{
       DarkMode: boolean;
+      isExpand: boolean;
     }>
   >;
 }) {

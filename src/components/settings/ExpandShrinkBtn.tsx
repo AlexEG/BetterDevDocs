@@ -2,8 +2,15 @@ import { useState } from "react";
 
 function ExpandShrinkBtn({
   openCloseAnimation,
+  setPostState,
 }: {
   openCloseAnimation: string;
+  setPostState: React.Dispatch<
+    React.SetStateAction<{
+      DarkMode: boolean;
+      isExpand: boolean;
+    }>
+  >;
 }) {
   const expand = (
     <path
@@ -23,6 +30,11 @@ function ExpandShrinkBtn({
   const [isExpand, setisExpand] = useState(false);
   function changeIsExpand() {
     setisExpand((prev) => !prev);
+
+    setPostState((prevState) => ({
+      ...prevState,
+      isExpand: !prevState.isExpand,
+    }));
   }
 
   return (

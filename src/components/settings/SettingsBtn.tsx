@@ -10,6 +10,7 @@ function SettingsBtn({
   setPostState: React.Dispatch<
     React.SetStateAction<{
       DarkMode: boolean;
+      isExpand: boolean;
     }>
   >;
 }) {
@@ -36,7 +37,7 @@ function SettingsBtn({
   }
 
   return (
-    <div className="w-[48rem]  flex justify-end items-end p-1 h-[8rem] fixed left-1/2 bottom-1 -translate-x-1/2  ">
+    <div className="flex justify-end items-end sticky bottom-1">
       <div className="flex gap-1 flex-row-reverse">
         <button
           onClick={openCloseSettings}
@@ -58,7 +59,10 @@ function SettingsBtn({
           </svg>
         </button>
 
-        <ExpandShrinkBtn openCloseAnimation={isOpen.openCloseAnimation} />
+        <ExpandShrinkBtn
+          setPostState={setPostState}
+          openCloseAnimation={isOpen.openCloseAnimation}
+        />
 
         <LightDarkBtn
           setPostState={setPostState}
