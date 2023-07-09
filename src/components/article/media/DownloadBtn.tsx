@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function DownloadBtn({ src, alt }: { src: string; alt?: string }) {
+function DownloadBtn({ src }: { src: string }) {
   const [isDownloaded, setIsDownloaded] = useState(false);
 
   function changeIsDownloadedState() {
@@ -11,12 +11,7 @@ function DownloadBtn({ src, alt }: { src: string; alt?: string }) {
     : "group-hover:drop-shadow-imageDownloadBtn";
 
   return (
-    <a
-      onClick={changeIsDownloadedState}
-      href={src}
-      download
-      title={`Download ${alt}`}
-    >
+    <a onClick={changeIsDownloadedState} href={src} download title={`Download`}>
       <button
         className={`bg-neutral-950 absolute bottom-1 right-1 rounded-full p-0.5 opacity-0 group-hover:opacity-80 ${dropShadow} transition-opacity duration-300 `}
       >

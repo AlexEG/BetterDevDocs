@@ -4,8 +4,8 @@
 import { openSettingsBar } from "./src/components/settings/Animation";
 import { closeSettingsBar } from "./src/components/settings/Animation";
 //* ---------- ---------- *//
-//* ----------[ Languages Bar ]---------- *//
 
+//* ----------[ Languages Bar ]---------- *//
 import { openLang } from "./src/components/settings/Animation";
 import { closeLang } from "./src/components/settings/Animation";
 import { closeLangContainer } from "./src/components/settings/Animation";

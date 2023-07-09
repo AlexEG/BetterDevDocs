@@ -4,7 +4,15 @@ import TranslateBtn from "./TranslateBtn";
 import LightDarkBtn from "./LightDarkBtn";
 import ExpandShrinkBtn from "./ExpandShrinkBtn";
 
-function SettingsBtn() {
+function SettingsBtn({
+  setPostState,
+}: {
+  setPostState: React.Dispatch<
+    React.SetStateAction<{
+      DarkMode: boolean;
+    }>
+  >;
+}) {
   const [isOpen, setIsOpen] = useState({
     Open: false,
     openCloseAnimation: "invisible",
@@ -28,7 +36,7 @@ function SettingsBtn() {
   }
 
   return (
-    <div className="w-[48rem]  flex justify-end items-end p-1 h-[8rem] fixed left-1/2 bottom-1 -translate-x-1/2 bg-sky-700 ">
+    <div className="w-[48rem]  flex justify-end items-end p-1 h-[8rem] fixed left-1/2 bottom-1 -translate-x-1/2  ">
       <div className="flex gap-1 flex-row-reverse">
         <button
           onClick={openCloseSettings}
@@ -52,7 +60,10 @@ function SettingsBtn() {
 
         <ExpandShrinkBtn openCloseAnimation={isOpen.openCloseAnimation} />
 
-        <LightDarkBtn openCloseAnimation={isOpen.openCloseAnimation} />
+        <LightDarkBtn
+          setPostState={setPostState}
+          openCloseAnimation={isOpen.openCloseAnimation}
+        />
 
         <TranslateBtn
           openCloseAnimation={isOpen.openCloseAnimation}

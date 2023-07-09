@@ -1,6 +1,16 @@
 import { useState } from "react";
 
-function LightDarkBtn({ openCloseAnimation }: { openCloseAnimation: string }) {
+function LightDarkBtn({
+  openCloseAnimation,
+  setPostState,
+}: {
+  openCloseAnimation: string;
+  setPostState: React.Dispatch<
+    React.SetStateAction<{
+      DarkMode: boolean;
+    }>
+  >;
+}) {
   const darkMode = (
     <path
       strokeLinecap="round"
@@ -16,10 +26,20 @@ function LightDarkBtn({ openCloseAnimation }: { openCloseAnimation: string }) {
     />
   );
 
-  const [currnetMode, setCurrentMode] = useState(false);
+  const [isDarkMode, setisDarkMode] = useState({
+    darkLight: false,
+  });
 
   function changeMode() {
-    setCurrentMode((prevMode) => !prevMode);
+    setisDarkMode((prevMode) => ({
+      ...prevMode,
+      darkLight: !prevMode.darkLight,
+    }));
+
+    setPostState((prevState) => ({
+      ...prevState,
+      DarkMode: !prevState.DarkMode,
+    }));
   }
 
   return (
@@ -35,7 +55,7 @@ function LightDarkBtn({ openCloseAnimation }: { openCloseAnimation: string }) {
         stroke="#fafafa"
         className="w-6 h-6 p-px"
       >
-        {currnetMode ? lightMode : darkMode}
+        {isDarkMode.darkLight ? lightMode : darkMode}
       </svg>
     </button>
   );

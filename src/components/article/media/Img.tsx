@@ -1,13 +1,9 @@
 import DownloadBtn from "./DownloadBtn";
-function Img({ src, alt }: { src: string; alt?: string }) {
+function Img({ src }: { src: string }) {
   return (
     <div className=" relative group w-fit mx-auto my-2">
-      <img
-        className=" max-w-full  max-h-96 rounded-lg"
-        src={src}
-        alt={alt ? alt : "Image"}
-      />
-      <DownloadBtn src={src} alt={alt ? alt : ""} />
+      <img className=" max-w-full  max-h-96 rounded-lg" src={src} alt="Image" />
+      <DownloadBtn src={src} />
     </div>
   );
 }
