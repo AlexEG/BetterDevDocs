@@ -34,13 +34,19 @@ function Post() {
           Post Title
         </h1>
         {/* /////////// */}
+
         <Img src={img7} />
         <Img src={img9} />
         <Img src={img1} />
 
         <ImgsGroup imgsArr={[img1, img4, img3]} />
-
-        <Paragraph />
+        <Paragraph
+          content={[
+            "helllllllllp",
+            "i mean hello not help",
+            "loremLorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsa sunt magni at nemo alias ad deserunt quae nisi, modi aliquam excepturi neque beatae voluptatem magnam necessitatibus expedita repellendus pariatur voluptas sed provident repudiandae accusantium, facilis quod? Nam sunt corporis molestias quaerat. Aut labore sint totam ipsum blanditiis velit dolorum.",
+          ]}
+        />
 
         <ImgsGroup
           imgsArr={[
