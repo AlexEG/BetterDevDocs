@@ -1,6 +1,7 @@
 import SettingsBtn from "../settings/SettingsBtn";
 import Img from "./media/Img";
 import ImgsGroup from "./media/ImgsGroup";
+import Paragraph from "./Paragraph";
 
 import img1 from "../../assets/test images/Screenshot_1.png";
 // import img2 from "../../assets/test images/Screenshot_14.png";
@@ -29,25 +30,18 @@ function Post() {
       <article
         className={`w-full min-h-screen rounded-lg p-6 mx-auto transition-all duration-500 delay-75 ${postWidth} ${PostDarkMode}`}
       >
+        <h1 className="text-center py-3 font-bold text-neutral-50 brightness-110">
+          Post Title
+        </h1>
         {/* /////////// */}
         <Img src={img7} />
         <Img src={img9} />
+        <Img src={img1} />
 
         <ImgsGroup imgsArr={[img1, img4, img3]} />
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-          excepturi hic aut. Animi laudantium ex consequatur porro cumque
-          tempore veniam ullam accusamus itaque veritatis! Quisquam recusandae,
-          rem numquam modi qui quidem impedit officia ipsam dolore quas odit aut
-          esse, harum assumenda, odio nam quia excepturi? Harum doloremque rerum
-          impedit officia officiis quidem quos voluptatem aspernatur dignissimos
-          non. Optio ducimus fugiat nam. Doloribus reiciendis sed sit possimus
-          tempore inventore ducimus doloremque esse blanditiis, cumque quae ut
-          suscipit similique quod sequi provident! Iure non tenetur consectetur
-          quibusdam cum saepe exercitationem vero? Ipsum praesentium aperiam
-          sapiente quo cupiditate quas, odio nihil suscipit error.
-        </p>
+        <Paragraph />
+
         <ImgsGroup
           imgsArr={[
             "https://fakeimg.pl/600x200",
