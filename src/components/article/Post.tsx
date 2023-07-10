@@ -26,9 +26,9 @@ function Post() {
     : "bg-neutral-200 selection:bg-neutral-600 selection:text-neutral-200";
 
   return (
-    <main className=" min-h-screen pt-12 pl-64 pr-64  ">
+    <main className="pl-64 min-h-screen pt-12 pr-64">
       <article
-        className={`w-full min-h-screen rounded-lg p-6 mx-auto transition-all duration-500 delay-75 ${postWidth} ${PostDarkMode}`}
+        className={`w-full min-h-screen rounded-lg p-6 mx-auto  transition-all duration-500 delay-75 ${postWidth} ${PostDarkMode}`}
       >
         <h1 className="text-center py-3 font-bold text-neutral-50 brightness-110">
           Post Title

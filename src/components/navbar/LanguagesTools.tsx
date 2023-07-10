@@ -29,7 +29,7 @@ function LanguagesTools(): JSX.Element[] {
           key={icon}
           src={allLanguagesToolsIconsArr[i]}
           alt={icon}
-        />
+        />,
       );
     }
   });

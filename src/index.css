@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* Scroll Bar  */
-
 
 /* Body */
 body::-webkit-scrollbar {
@@ -13,7 +11,6 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
   background: #262626;
-
 }
 
 body::-webkit-scrollbar-thumb {
@@ -24,8 +21,6 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
   background: rgb(23, 23, 23);
 }
-
-
 
 /* aside */
 aside::-webkit-scrollbar {
@@ -39,7 +34,7 @@ aside::-webkit-scrollbar-track {
 }
 
 div.sidebar-content:hover aside::-webkit-scrollbar-track {
-  background: linear-gradient(0deg, rgb(64, 64, 64), transparent, transparent)
+  background: linear-gradient(0deg, rgb(64, 64, 64), transparent, transparent);
 }
 
 aside::-webkit-scrollbar-thumb {
@@ -48,5 +43,5 @@ aside::-webkit-scrollbar-thumb {
 }
 
 aside::-webkit-scrollbar-thumb:hover {
-  background: #737373
+  background: #737373;
 }
