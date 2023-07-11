@@ -1,5 +1,5 @@
 import Navbar from "./components/navbar/Navbar";
-import NotesSidebar from "./components/notes-sidebar/NotesSidebar";
+import Sidebar from "./components/sidebar/Sidebar";
 import Post from "./components/article/Post";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
 
       <div className=" bg-neutral-700 h-[calc(100%-4rem)] w-56 fixed right-4 top-12 bottom-4 rounded-lg"></div>
 
-      <NotesSidebar />
+      <Sidebar />
     </div>
   );
 }
