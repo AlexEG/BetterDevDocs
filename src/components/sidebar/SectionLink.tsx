@@ -48,7 +48,7 @@ function SectionLink({
         openSection === sectionTitle
           ? "before:bg-neutral-50 text-neutral-50"
           : "before:bg-neutral-600 text-neutral-200"
-      }  before:absolute relative before:top-0 before:-left-2 before:h-full before:w-0.5 py-1 cursor-pointer select-none `}
+      }  before:absolute relative before:top-0 before:-left-2 pl-1 before:h-full before:w-0.5 py-1 cursor-pointer select-none `}
     >
       {item}
     </p>
