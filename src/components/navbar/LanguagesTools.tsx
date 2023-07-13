@@ -22,17 +22,18 @@ function LanguagesTools(): JSX.Element[] {
   allLanguagesToolsIconsArrTitle.map((icon, i) => {
     if (dataArr.includes(icon)) {
       iconsArr.push(
-        <Link to={`/${icon.toLocaleLowerCase()}`}>
-          <img
-            onClick={() => ChangeBlogSection(icon)}
-            className={`${
-              blogSection === icon ? "brightness-110" : "brightness-50"
-            } hover:brightness-110 transition cursor-pointer w-6`}
-            key={icon}
-            src={allLanguagesToolsIconsArr[i]}
-            alt={icon}
-          />
-        </Link>,
+        <button onClick={() => ChangeBlogSection(icon)}>
+          <Link to={`/${icon.toLocaleLowerCase()}`}>
+            <img
+              className={`${
+                blogSection === icon ? "brightness-110" : "brightness-50"
+              } hover:brightness-110 transition cursor-pointer w-6`}
+              key={icon}
+              src={allLanguagesToolsIconsArr[i]}
+              alt={icon}
+            />
+          </Link>
+        </button>,
       );
     }
   });

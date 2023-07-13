@@ -1,0 +1,60 @@
+{
+  "homePage": [
+    [
+      "section one in language",
+      [
+        "Functions",
+        "Expressions and operators",
+        "Numbers and dates",
+        "Text formatting",
+        "Regular expressions",
+        "Indexed collections",
+        "Keyed collections",
+        "Working with objects"
+      ]
+    ],
+
+    [
+      "section Tow in language",
+      [
+        "Functions 22",
+        "Expressions and operators 22",
+        "Numbers and dates 22",
+        "Text formatting 22",
+        "Regular expressions 22",
+        "Indexed collections 22",
+        "Keyed collections 22",
+        "Working with objects 22"
+      ]
+    ]
+  ],
+  "MDN": [
+    [
+      "section one in language MDN",
+      [
+        "Functions",
+        "Expressions and operators",
+        "Numbers and dates",
+        "Text formatting",
+        "Regular expressions",
+        "Indexed collections",
+        "Keyed collections",
+        "Working with objects"
+      ]
+    ],
+
+    [
+      "section Tow in language MDN",
+      [
+        "Functions 22",
+        "Expressions and operators 22",
+        "Numbers and dates 22",
+        "Text formatting 22",
+        "Regular expressions 22",
+        "Indexed collections 22",
+        "Keyed collections 22",
+        "Working with objects 22"
+      ]
+    ]
+  ]
+}

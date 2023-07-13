@@ -1,10 +1,12 @@
 import LanguagesTools from "./LanguagesTools";
 import { Link } from "react-router-dom";
+import SettingsAccountBtn from "./SettingsAccountBtn";
 
 function Navbar() {
   return (
-    <nav className="bg-neutral-900 rounded-lg z-10 fixed h-8 top-2 left-4 right-4 px-1 flex justify-between ">
+    <nav className="bg-neutral-900 rounded-lg z-10 fixed h-8 top-2 left-4 right-4 px-1 flex justify-between shadow-black shadow-md ">
       {/* left Side  */}
+
       <div className="h-full flex items-center justify-self-start">
         <Link to="/">
           <svg
@@ -27,6 +29,8 @@ function Navbar() {
       <div className="w-fit flex h-full gap-2 py-1">
         <LanguagesTools />
       </div>
+
+      <SettingsAccountBtn />
     </nav>
   );
 }

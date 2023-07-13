@@ -12,7 +12,7 @@ function SectionLink({
   setOpenSection: React.Dispatch<React.SetStateAction<string>>;
 }) {
   const [sectionTap, setSectionTap] = useState({
-    isSectionTapOpen: false,
+    isSectionTapOpen: true,
     selectOpenSubSec: `${sectionTitle}-subSection-${0}`,
   });
 
