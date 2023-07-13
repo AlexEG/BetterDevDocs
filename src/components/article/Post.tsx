@@ -11,7 +11,8 @@ import img4 from "../../assets/test images/Screenshot_16.png";
 // import img6 from "../../assets/test images/Screenshot_18.png";
 import img7 from "../../assets/test images/Screenshot_19.png";
 // import img8 from "../../assets/test images/Screenshot_3.png";
-import img9 from "../../assets/test images/Screenshot_8.png";
+
+import CodeBlock from "../CodeBlock";
 
 import { useState } from "react";
 function Post() {
@@ -25,6 +26,115 @@ function Post() {
     ? "bg-black text-neutral-200 selection:bg-neutral-200 selection:text-neutral-950"
     : "bg-neutral-200 selection:bg-neutral-600 selection:text-neutral-200";
 
+  const code1 = `
+    function name(params:type) {
+      
+    }
+    function Highlighter({ content, language }: HighlighterProps): JSX.Element {
+      const highlighted = language
+        ? hljs.highlight(language, content)
+        : hljs.highlightAuto(content);
+    
+      return (
+        <pre className="hljs">
+          <code dangerouslySetInnerHTML={{ __html: highlighted.value }} />
+        </pre>
+      );
+    }
+      `;
+
+  const code2 = `
+    import React from "react";
+    import ReactDOM from "react-dom/client";
+    import App from "./App.tsx";
+    // import "./index.css";
+    import "./github-dark.min.css";
+    
+    ReactDOM.createRoot(document.getElementById("root")!).render(
+      <React.StrictMode>
+        <App />
+        <Img src={img7} />
+      </React.StrictMode>
+    );
+    `;
+
+  const code3 = `
+  package main
+
+  import (
+    "fmt"
+    "testing"
+  )
+  
+  // References:
+  // https://golang.org/ref/spec#Passing_arguments_to_..._parameters
+  func AddNumbers(s ...int) int {
+    sum := 0
+    for _, x := range s {
+      sum += x
+    }
+    return sum
+  }
+  
+  func TestAddNumbers(t *testing.T) {
+    tests := []struct {
+      name string
+      s    []int
+      want int
+    }{
+      {
+        name: "nil",
+        s:    nil,
+        want: 0,
+      },
+      {
+        name: "single number",
+        s:    []int{1},
+        want: 1,
+      },
+      {
+        name: "multiple numbers",
+        s:    []int{4, 3, 2, 1, 0},
+        want: 10,
+      },
+    }
+    for _, tt := range tests {
+      t.Run(tt.name, func(t *testing.T) {
+        if got := AddNumbers(tt.s...); got != tt.want {
+          t.Errorf("AddNumbers(%v) = %v, want %v", tt.s, got, tt.want)
+        }
+      })
+    }
+  }
+  
+  func ExampleAddNumbers() {
+    fmt.Println(AddNumbers(4, 3, 2, 1, 0))
+    fmt.Println(AddNumbers([]int{4, 3, 2, 1, 0}...))
+    // Output:
+    // 10
+    // 10
+  }
+    `;
+
+  const code4 = `
+    body::-webkit-scrollbar {
+      width: 7px;
+    }
+    
+    body::-webkit-scrollbar-track {
+      background: #262626;
+    }
+    
+    body::-webkit-scrollbar-thumb {
+      background: rgb(10, 10, 10);
+      border-radius: 5px;
+    }
+    
+    body::-webkit-scrollbar-thumb:hover {
+      background: rgb(23, 23, 23);
+    }
+    `;
+
   return (
     <main className="pl-64 min-h-screen pt-12 pr-64">
       <article
@@ -36,8 +146,6 @@ function Post() {
         {/* /////////// */}
 
         <Img src={img7} />
-        <Img src={img9} />
-        <Img src={img1} />
 
         <ImgsGroup imgsArr={[img1, img4, img3]} />
         <Paragraph
@@ -47,6 +155,13 @@ function Post() {
             "loremLorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsa sunt magni at nemo alias ad deserunt quae nisi, modi aliquam excepturi neque beatae voluptatem magnam necessitatibus expedita repellendus pariatur voluptas sed provident repudiandae accusantium, facilis quod? Nam sunt corporis molestias quaerat. Aut labore sint totam ipsum blanditiis velit dolorum.",
           ]}
         />
+        <CodeBlock language="jsx" content={code1} />
+        <br />
+        <CodeBlock language="jsx" content={code2} />
+        <br />
+        <CodeBlock language="go" content={code3} />
+        <br />
+        <CodeBlock language="css" content={code4} />
 
         <ImgsGroup
           imgsArr={[
