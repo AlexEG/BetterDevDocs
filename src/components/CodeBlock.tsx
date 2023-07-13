@@ -38,10 +38,12 @@ function CodeBlock({
         <code dangerouslySetInnerHTML={{ __html: highlighted.value }} />
       </pre>
 
-      {filePath && (
-        <DownloadBtn src={`/downloadable-code-snippets/${filePath}`} />
-      )}
-      <CopyToClipboard content={content} />
+      <div className="absolute top-2 right-2 flex gap-1 ">
+        <CopyToClipboard content={content} />
+        {filePath && (
+          <DownloadBtn src={`/downloadable-code-snippets/${filePath}`} />
+        )}
+      </div>
     </div>
   );
 }

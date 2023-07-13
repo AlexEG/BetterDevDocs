@@ -17,7 +17,7 @@ function CopyToClipboard({ content: content }: { content: string }) {
         navigator.clipboard.writeText(content);
       }}
       title="Copy To Clipboard"
-      className={`bg-neutral-950 absolute top-2 right-12 rounded-full p-0.5 opacity-0 group-hover:opacity-80 ${dropShadow} transition-opacity duration-300 `}
+      className={`bg-neutral-950 w-7 h-7 rounded-full p-0.5 opacity-0 group-hover:opacity-80 ${dropShadow} transition-opacity duration-300 `}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
