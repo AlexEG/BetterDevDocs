@@ -21,6 +21,7 @@ interface HighlighterProps {
 }
 
 import DownloadBtn from "./article/media/DownloadBtn";
+import CopyToClipboard from "./CopyToClipboard";
 
 function CodeBlock({
   content,
@@ -40,6 +41,7 @@ function CodeBlock({
       {filePath && (
         <DownloadBtn src={`/downloadable-code-snippets/${filePath}`} />
       )}
+      <CopyToClipboard content={content} />
     </div>
   );
 }
