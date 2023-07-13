@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import Icons from "./Icons";
 import LanguagesToolsDATA from "../../DATA/LanguagesTools.json";
@@ -21,15 +22,17 @@ function LanguagesTools(): JSX.Element[] {
   allLanguagesToolsIconsArrTitle.map((icon, i) => {
     if (dataArr.includes(icon)) {
       iconsArr.push(
-        <img
-          onClick={() => ChangeBlogSection(icon)}
-          className={`${
-            blogSection === icon ? "brightness-110" : "brightness-50"
-          } hover:brightness-110 transition cursor-pointer`}
-          key={icon}
-          src={allLanguagesToolsIconsArr[i]}
-          alt={icon}
-        />,
+        <Link to={`/${icon.toLocaleLowerCase()}`}>
+          <img
+            onClick={() => ChangeBlogSection(icon)}
+            className={`${
+              blogSection === icon ? "brightness-110" : "brightness-50"
+            } hover:brightness-110 transition cursor-pointer w-6`}
+            key={icon}
+            src={allLanguagesToolsIconsArr[i]}
+            alt={icon}
+          />
+        </Link>,
       );
     }
   });
