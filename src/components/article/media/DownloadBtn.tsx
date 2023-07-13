@@ -11,9 +11,9 @@ function DownloadBtn({ src }: { src: string }) {
     : "group-hover:drop-shadow-imageDownloadBtn";
 
   return (
-    <a onClick={changeIsDownloadedState} href={src} download title={`Download`}>
+    <a onClick={changeIsDownloadedState} href={src} download title="Download">
       <button
-        className={`bg-neutral-950 absolute bottom-1 right-1 rounded-full p-0.5 opacity-0 group-hover:opacity-80 ${dropShadow} transition-opacity duration-300 `}
+        className={`bg-neutral-950 absolute top-2 right-2 rounded-full p-0.5 opacity-0 group-hover:opacity-80 ${dropShadow} transition-opacity duration-300 `}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

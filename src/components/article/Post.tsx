@@ -27,36 +27,96 @@ function Post() {
     : "bg-neutral-200 selection:bg-neutral-600 selection:text-neutral-200";
 
   const code1 = `
-    function name(params:type) {
-      
-    }
-    function Highlighter({ content, language }: HighlighterProps): JSX.Element {
-      const highlighted = language
-        ? hljs.highlight(language, content)
-        : hljs.highlightAuto(content);
-    
-      return (
-        <pre className="hljs">
+  // import hljs from "highlight.js/lib/common";
+  import hljs from "highlight.js/lib/core";
+  import "highlight.js/styles/github-dark.css";
+  
+  import javascript from "highlight.js/lib/languages/javascript";
+  hljs.registerLanguage("javascript", javascript);
+  
+  import go from "highlight.js/lib/languages/go";
+  hljs.registerLanguage("go", go);
+  
+  import css from "highlight.js/lib/languages/css";
+  hljs.registerLanguage("css", css);
+  
+  import typescript from "highlight.js/lib/languages/typescript";
+  hljs.registerLanguage("typescript", typescript);
+  
+  interface HighlighterProps {
+    content: string;
+    language?: string;
+    filePath?: string;
+  }
+  
+  import DownloadBtn from "./article/media/DownloadBtn";
+  
+  function CodeBlock({
+    content,
+    language,
+    filePath,
+  }: HighlighterProps): JSX.Element {
+    const highlighted = language
+      ? hljs.highlight(language, content)
+      : hljs.highlightAuto(content);
+  
+    return (
+      <div className="relative group">
+        <pre className="hljs selection:bg-[#55005555] select-text rounded-lg">
           <code dangerouslySetInnerHTML={{ __html: highlighted.value }} />
         </pre>
-      );
-    }
-      `;
+  
+        {filePath && (
+          <DownloadBtn src={\`/downloadable-code-snippets/\${filePath}\`} />
+        )}
+      </div>
+    );
+  }
+  export default CodeBlock;
+  `;
 
   const code2 = `
-    import React from "react";
-    import ReactDOM from "react-dom/client";
-    import App from "./App.tsx";
-    // import "./index.css";
-    import "./github-dark.min.css";
-    
-    ReactDOM.createRoot(document.getElementById("root")!).render(
-      <React.StrictMode>
-        <App />
-        <Img src={img7} />
-      </React.StrictMode>
+  import { useState } from "react";
+
+  function DownloadBtn({ src }: { src: string }) {
+    const [isDownloaded, setIsDownloaded] = useState(false);
+  
+    function changeIsDownloadedState() {
+      setIsDownloaded(true);
+    }
+    const dropShadow = isDownloaded
+      ? "group-hover:drop-shadow-imageDownloadBtnDownloaded"
+      : "group-hover:drop-shadow-imageDownloadBtn";
+  
+    return (
+      <a onClick={changeIsDownloadedState} href={src} download title="Download">
+        <button
+          className={\`bg-neutral-950 absolute top-2 right-2 rounded-full p-0.5
+            opacity-0 group-hover:opacity-80 \${dropShadow} transition-opacity
+            duration-300 \`}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.3}
+            stroke="#fafafa"
+            className="w-6 h-6 "
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0
+                9 9 0 0118 0z"
+            />
+          </svg>
+        </button>
+      </a>
     );
-    `;
+  }
+  
+  export default DownloadBtn;
+  `;
 
   const code3 = `
   package main
@@ -155,9 +215,10 @@ function Post() {
             "loremLorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsa sunt magni at nemo alias ad deserunt quae nisi, modi aliquam excepturi neque beatae voluptatem magnam necessitatibus expedita repellendus pariatur voluptas sed provident repudiandae accusantium, facilis quod? Nam sunt corporis molestias quaerat. Aut labore sint totam ipsum blanditiis velit dolorum.",
           ]}
         />
-        <CodeBlock language="jsx" content={code1} />
+
+        <CodeBlock language="tsx" filePath="CodeBlock.zip" content={code1} />
         <br />
-        <CodeBlock language="jsx" content={code2} />
+        <CodeBlock language="jsx" filePath="DownloadBtn.zip" content={code2} />
         <br />
         <CodeBlock language="go" content={code3} />
         <br />

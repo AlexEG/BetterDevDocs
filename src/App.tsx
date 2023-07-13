@@ -14,9 +14,6 @@ function App() {
         <Route path="/react" element={<ReactHome />}></Route>
         <Route path="/tailwindcss" element={<TailwindCSSHome />}></Route>
       </Routes>
-      <pre>
-        <code className="language-typescript">const variable = 'raw';</code>
-      </pre>
     </BrowserRouter>
   );
 }
