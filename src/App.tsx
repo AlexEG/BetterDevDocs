@@ -13,6 +13,8 @@ import TailwindCSSHome from "./pages/TailwindCSS/TailwindCSSHome";
 //* -----------[ React ]----------- *//
 import ReactHome from "./pages/React/ReactHome";
 
+import BooksHome from "./pages/Books/BooksHome";
+
 function App() {
   return (
     <BrowserRouter>
@@ -20,7 +22,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/javascript" element={<JavaScriptHome />}></Route>
+
         <Route path="/javascript/mdn" element={<JavaScriptMDN />}></Route>
+        <Route path="/books" element={<BooksHome />}></Route>
+
         <Route path="/react" element={<ReactHome />}></Route>
         <Route path="/tailwindcss" element={<TailwindCSSHome />}></Route>
       </Routes>

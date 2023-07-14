@@ -5,9 +5,7 @@ function ImgsGroup({ imgsArr }: { imgsArr: string[] }) {
 
   const imagesComponents = imgsArr.map((img) => <Img src={img} />);
 
-  return (
-    <div className={`${flex} py-2 flex-wrap gap-2`}>{imagesComponents}</div>
-  );
+  return <div className={`${flex} py-2  gap-2`}>{imagesComponents}</div>;
 }
 
 export default ImgsGroup;
