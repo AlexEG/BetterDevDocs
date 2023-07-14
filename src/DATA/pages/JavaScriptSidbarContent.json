@@ -56,53 +56,5 @@
         "Working with objects 22"
       ]
     ]
-  ],
-  "books": {
-    "YouDontKnowJS_up&going": [
-      [
-        "1. Into Programming",
-        [
-          "Code",
-          "Expressions",
-          "Try It Yourself",
-          "Operators",
-          "Values & Types",
-          "Code Comments",
-          "Variables",
-          "Blocks",
-          "Conditionals",
-          "Loops",
-          "Functions",
-          "Practice",
-          "Review"
-        ]
-      ],
-      [
-        "2. Into JavaScript",
-        [
-          "Values & Types",
-          "Variables",
-          "Conditionals",
-          "Strict Mode",
-          "Functions as Values",
-          "this Identifier",
-          "Prototypes",
-          "Old & New",
-          "Non-JavaScript",
-          "Review"
-        ]
-      ],
-      [
-        "3. Into UDKJS",
-        [
-          "Scope & Closures",
-          "this & Object Prototypes",
-          "Types & Grammar",
-          "Async & Performance",
-          "ES6 & Beyond",
-          "Review"
-        ]
-      ]
-    ]
-  }
+  ]
 }

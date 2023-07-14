@@ -1,16 +1,17 @@
 import { useState } from "react";
 import SectionLink from "./SectionLink";
 
-function Sidebar({ sidebarSections }: any) {
+function Sidebar({ SidebarDATA, setOpenSec }: { SidebarDATA: any }) {
   const [openSection, setOpenSection] = useState("JavaScript");
 
-  const allSidebarElements = sidebarSections.map((section) => (
+  const allSidebarElements = SidebarDATA.map((secTitle) => (
     <SectionLink
-      key={section[0]}
+      key={secTitle[0]}
       openSection={openSection}
       setOpenSection={setOpenSection}
-      sectionTitle={section[0]}
-      subSections={section[1]}
+      sectionTitle={secTitle[0]}
+      subSections={secTitle[1]}
+      setOpenSec={setOpenSec}
     />
   ));
 

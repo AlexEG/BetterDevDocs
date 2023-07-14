@@ -29,7 +29,7 @@ function SettingsAccountBtn() {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="#0a0a0a"
-          className="w-6 h-6 bg-neutral-300 px-1 rounded-lg mr-2"
+          className="w-6 h-6 bg-neutral-300 px-1 rounded-lg"
         >
           <path
             stroke-linecap="round"
