@@ -21,10 +21,11 @@ import YDKJS_this_ObjectPrototypes from "./pages/Books/YDKJS_this_ObjectPrototyp
 import YDKJS_Types_Grammar from "./pages/Books/YDKJS_Types_Grammar";
 import YDKJS_Async_Performance from "./pages/Books/YDKJS_Async_Performance";
 
+import NewUITest from "./pages/NewUITest";
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/javascript" element={<JavaScriptHome />}></Route>
@@ -52,6 +53,8 @@ function App() {
           element={<YDKJS_Async_Performance />}
         ></Route>
         {/* -----------[ Books ]-[ END ]---------- */}
+
+        <Route path="/newuitest" element={<NewUITest />}></Route>
       </Routes>
     </BrowserRouter>
   );

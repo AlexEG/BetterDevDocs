@@ -22,6 +22,24 @@ body::-webkit-scrollbar-thumb:hover {
   background: rgb(23, 23, 23);
 }
 
+/* Body NEW UI TEST */
+.newuitestsidebar::-webkit-scrollbar {
+  width: 7px;
+}
+
+.newuitestsidebar::-webkit-scrollbar-track {
+  background: #262626;
+  margin-top: 2.5rem;
+}
+
+.newuitestsidebar::-webkit-scrollbar-thumb {
+  background: rgb(10, 10, 10);
+}
+
+.newuitestsidebar::-webkit-scrollbar-thumb:hover {
+  background: rgb(23, 23, 23);
+}
+
 /* aside */
 aside::-webkit-scrollbar {
   width: 7px;
