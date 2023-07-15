@@ -43,7 +43,9 @@ function JSHome() {
 
         <div className="flex gap-2">{/* <LanguagesTools /> */}</div>
       </nav>
+
       <Sidebar />
+
       <main className="bg-neutral-800  h-screen py-16  px-72 flex justify-center overflow-y-auto newuitestsidebar ">
         <section className=" text-neutral-950 font-medium bg-neutral-300 max-w-3xl p-4 h-fit after:w-0 after:h-0 after:absolute after:bottom-0 after:right-0 after:border-[1.25rem] after:border-l-transparent after:border-t-transparent  after:border-neutral-800 before:w-0 before:h-0 before:absolute before:top-0 before:left-0 before:border-[1.25rem] before:border-r-transparent before:border-b-transparent  before:border-neutral-800 relative py-8">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, nostrum

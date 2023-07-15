@@ -40,6 +40,23 @@ body::-webkit-scrollbar-thumb:hover {
   background: rgb(23, 23, 23);
 }
 
+/* Sidebar NEW UI */
+.sidebar-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-scrollbar::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+.sidebar-scrollbar::-webkit-scrollbar-thumb {
+  background: #525252;
+}
+
+.sidebar-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgb(23, 23, 23);
+}
+
 /* aside */
 aside::-webkit-scrollbar {
   width: 7px;
