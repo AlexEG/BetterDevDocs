@@ -1,31 +1,30 @@
-import { useState } from "react";
-import SectionLink from "./SectionLink";
+import SidebarMenu from "./SidebarMenu";
+import SidebarDocsSourceContainer from "./SidebarDocsSourceContainer";
 
-function Sidebar({ SidebarDATA, setOpenSec }: { SidebarDATA: any }) {
-  const [openSection, setOpenSection] = useState("JavaScript");
-
-  const allSidebarElements = SidebarDATA.map((secTitle) => (
-    <SectionLink
-      key={secTitle[0]}
-      openSection={openSection}
-      setOpenSection={setOpenSection}
-      sectionTitle={secTitle[0]}
-      subSections={secTitle[1]}
-      setOpenSec={setOpenSec}
-    />
-  ));
-
-  // console.log(
-  //   "🚀 ~ file: Sidebar.tsx:8 ~ Sidebar ~ allSidebarElements:",
-  //   allSidebarElements,
-  // );
-
+function Sidebar() {
   return (
-    <div className="sidebar-content  pr-1.5 h-[calc(100%-4rem)] fixed overflow-hidden left-4  bg-neutral-950 top-12 bottom-4 rounded-lg">
-      <aside className="h-full  w-56 p-2 overflow-y-auto">
-        {allSidebarElements}
-      </aside>
-    </div>
+    <aside className="bg-neutral-950 w-60 h-[calc(100%-2.5rem)] fixed top-10 left-0 after:w-0 after:h-0 after:absolute after:top-0 after:right-0 after:border-[1.25rem] after:border-r-transparent after:border-b-transparent after:translate-x-full after:border-neutral-950 pt-10 ">
+      <SidebarDocsSourceContainer
+        DocsSourceName="MDN"
+        isDocsSourceContainerChosen={true}
+      />
+
+      <SidebarDocsSourceContainer
+        DocsSourceName="W3 School"
+        isDocsSourceContainerChosen={false}
+      />
+      <SidebarDocsSourceContainer
+        DocsSourceName="JavaScript.info"
+        isDocsSourceContainerChosen={false}
+      />
+
+      <SidebarDocsSourceContainer
+        DocsSourceName="JDKJS Up & Going"
+        isDocsSourceContainerChosen={false}
+      />
+
+      <SidebarMenu />
+    </aside>
   );
 }
 
