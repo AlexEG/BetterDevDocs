@@ -38,11 +38,11 @@ function SidebarDocsSourceContainer({
   }
 
   return (
-    <section
-      onClick={() => chooseDocsSourceContainer(DocsSourceName)}
-      className={` font-extrabold text-neutral-50 cursor-pointer`}
-    >
-      <h2 className={`${isDocsSourceContainerChosen_CSS} p-2`}>
+    <section className={` font-extrabold text-neutral-50 cursor-pointer`}>
+      <h2
+        onClick={() => chooseDocsSourceContainer(DocsSourceName)}
+        className={`${isDocsSourceContainerChosen_CSS} p-2`}
+      >
         {DocsSourceName}
       </h2>
 

@@ -10,7 +10,7 @@ interface Sidebar {
   };
   openCloseSidebarBtnFunc(): void;
   chooseDocsSourceContainer(DocsSourceName: string): void;
-  whatSubSectionIsOpenFunc(subSectionFullTitle: string): void;
+  ChangeSubSectionIsOpen(subSectionFullTitle: string): void;
 }
 
 function Sidebar({
@@ -18,10 +18,12 @@ function Sidebar({
   SidebarState,
   openCloseSidebarBtnFunc,
   chooseDocsSourceContainer,
-  whatSubSectionIsOpenFunc,
+  ChangeSubSectionIsOpen,
 }: Sidebar) {
   const isTheSidebarOpen_CSS = SidebarState.isTheSidebarOpen ? "w-60" : "w-10";
 
+  // console.log(JavaScriptSidebarData);
+  // console.log(JavaScriptArticleContentData);
   // <SidebarDocsSourceContainer/> Components [Start]
   let components = [];
   for (const key in SidebarData) {
@@ -36,7 +38,7 @@ function Sidebar({
         }
         chooseDocsSourceContainer={(e) => chooseDocsSourceContainer(e)}
         whatSubSectionIsOpen={SidebarState.DocsSourceContainerChosen_SubSection}
-        ChangeSubSectionIsOpen={(e) => whatSubSectionIsOpenFunc(e)}
+        ChangeSubSectionIsOpen={(e) => ChangeSubSectionIsOpen(e)}
         sectionsTitleAndSubsections={SidebarData[key]}
       />,
     );

@@ -25,16 +25,24 @@ function BreadcrumbNavigation({
     <div className="text-neutral-300 text-sm text-center flex">
       <span>{PageIndex}</span>
 
-      {arrowSVG}
-      <span> {DocsSourceName} </span>
-
-      {arrowSVG}
-
-      <span> {Section}</span>
-
-      {arrowSVG}
-
-      <span> {SupSection}</span>
+      {DocsSourceName && (
+        <>
+          {arrowSVG}
+          <span> {DocsSourceName} </span>
+        </>
+      )}
+      {Section && (
+        <>
+          {arrowSVG}
+          <span> {Section}</span>
+        </>
+      )}
+      {SupSection && (
+        <>
+          {arrowSVG}
+          <span> {SupSection}</span>
+        </>
+      )}
     </div>
   );
 }

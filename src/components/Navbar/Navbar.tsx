@@ -4,15 +4,20 @@ import { Link } from "react-router-dom";
 
 interface Navbar {
   NavbarState: {
-    DocsSourceName: string;
-    Section: string;
-    SupSection: string;
     SelectedLang: string;
   };
   ChangeSelectedLang(LangName: string): void;
+  DocsSourceName: string;
+  SectionAndSubSection: string;
 }
 
-function Navbar({ NavbarState, ChangeSelectedLang }: Navbar) {
+function Navbar({
+  NavbarState,
+  ChangeSelectedLang,
+  DocsSourceName,
+  SectionAndSubSection,
+}: Navbar) {
+  // console.log(SectionAndSubSection.split("-")[0]);
   return (
     <nav className="h-10 bg-neutral-950 flex fixed top-0 w-full left-0 justify-between items-center px-2 z-10 ">
       <div className="flex gap-2">
@@ -33,10 +38,10 @@ function Navbar({ NavbarState, ChangeSelectedLang }: Navbar) {
           </svg>
         </Link>
         <BreadcrumbNavigation
-          PageIndex={"JS"}
-          DocsSourceName={NavbarState.DocsSourceName}
-          Section={NavbarState.Section}
-          SupSection={NavbarState.SupSection}
+          PageIndex={NavbarState.SelectedLang}
+          DocsSourceName={DocsSourceName}
+          Section={SectionAndSubSection.split("-")[0]}
+          SupSection={SectionAndSubSection.split("-")[1]}
         />
       </div>
       <div className="flex gap-2">
