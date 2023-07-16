@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import Sidebar from "../../components/Sidebar/Sidebar";
-import Navbar from "../../components/Navbar/Navbar";
-import ArticleContent from "../../components/ArticleContent";
+import Sidebar from "../components/Sidebar/Sidebar";
+import Navbar from "../components/Navbar/Navbar";
+import ArticleContent from "../components/ArticleContent";
 
-import JavaScriptSidebarData from "../../DATA/JavaScriptSidebarData";
+import JavaScriptSidebarData from "../DATA/JS/JavaScriptSidebarData";
 import { Outlet } from "react-router-dom";
 
 function JSHome() {
@@ -19,16 +19,6 @@ function JSHome() {
     },
   });
 
-  // Navbar State [Start]
-  function ChangeSelectedLang(LangName: string): void {
-    setJSHomeState((JSHomeState) => {
-      return {
-        ...JSHomeState,
-        NavbarState: { ...JSHomeState.NavbarState, SelectedLang: LangName },
-      };
-    });
-  }
-  // Navbar State [End]
   // Sidebar State [Start]
 
   // <OpenCloseSidebarBtn />[Start]
@@ -73,7 +63,6 @@ function JSHome() {
     <div className="h-screen overflow-hidden ">
       <Navbar
         NavbarState={JSHomeState.NavbarState}
-        ChangeSelectedLang={(e) => ChangeSelectedLang(e)}
         DocsSourceName={JSHomeState.SidebarState.DocsSourceContainerChosen}
         SectionAndSubSection={
           JSHomeState.SidebarState.DocsSourceContainerChosen_SubSection

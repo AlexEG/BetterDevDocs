@@ -2,12 +2,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import DocsHomePage from "./pages/DocsHomePage";
 import Page404 from "./pages/Page404";
+// JavaScript
+import JSMDNRoutes from "./DATA/JS/JavaScriptMDNRoutes";
+import JavaScriptW3SchoolRoutes from "./DATA/JS/JavaScriptW3SchoolRoutes";
+import JSHome from "./pages/JSHome";
 
-import JSMDNRoutes from "./pages/JS/JavaScriptMDNRoutes";
+// TailwindCSS
+import TailwindCSSHome from "./pages/TailwindCSSHome";
+import TailwindcssOfficialRoutes from "./DATA/TailwindCSS/TailwindcssOfficialRoutes";
 
-import JSHome from "./pages/JS/JSHome";
-
-import JavaScriptW3SchoolRoutes from "./pages/JS/JavaScriptW3SchoolRoutes";
 function App() {
   return (
     <BrowserRouter>
@@ -19,6 +22,13 @@ function App() {
           <Route
             path="w3-school/*"
             element={<JavaScriptW3SchoolRoutes />}
+          ></Route>
+        </Route>
+
+        <Route path="tailwindcss" element={<TailwindCSSHome />}>
+          <Route
+            path="official/*"
+            element={<TailwindcssOfficialRoutes />}
           ></Route>
         </Route>
 

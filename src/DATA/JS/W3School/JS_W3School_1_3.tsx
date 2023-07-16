@@ -1,7 +1,7 @@
-export default function Section1_1() {
+export default function JS_W3School_1_3() {
   return (
     <div>
-      <h1>JavaScript First Steps</h1>
+      <h1>JavaScript First Steps JS_W3School_1_3</h1>
       <img src="https://i.imgur.com/6xrqbvr.jpg" alt="" />
       <p>
         In our first JavaScript module, we first answer some fundamental

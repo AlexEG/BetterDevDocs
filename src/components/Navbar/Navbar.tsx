@@ -6,17 +6,11 @@ interface Navbar {
   NavbarState: {
     SelectedLang: string;
   };
-  ChangeSelectedLang(LangName: string): void;
   DocsSourceName: string;
   SectionAndSubSection: string;
 }
 
-function Navbar({
-  NavbarState,
-  ChangeSelectedLang,
-  DocsSourceName,
-  SectionAndSubSection,
-}: Navbar) {
+function Navbar({ NavbarState, DocsSourceName, SectionAndSubSection }: Navbar) {
   // console.log(SectionAndSubSection.split("-")[0]);
   return (
     <nav className="h-10 bg-neutral-950 flex fixed top-0 w-full left-0 justify-between items-center px-2 z-10 ">
@@ -45,10 +39,7 @@ function Navbar({
         />
       </div>
       <div className="flex gap-2">
-        <LanguagesTools
-          ChangeSelectedLang={(e) => ChangeSelectedLang(e)}
-          SelectedLang={NavbarState.SelectedLang}
-        />
+        <LanguagesTools SelectedLang={NavbarState.SelectedLang} />
       </div>
     </nav>
   );

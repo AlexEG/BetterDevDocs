@@ -2,10 +2,8 @@ import { Link } from "react-router-dom";
 import Icons from "../Icons";
 
 function LanguagesTools({
-  ChangeSelectedLang,
   SelectedLang,
 }: {
-  ChangeSelectedLang(LangName: string): void;
   SelectedLang: string;
 }): JSX.Element[] {
   const allLanguagesToolsIconsArr = Object.values(Icons);
@@ -16,7 +14,7 @@ function LanguagesTools({
   const iconsArr: JSX.Element[] = [];
   allLanguagesToolsIconsArrTitle.map((icon, i) => {
     iconsArr.push(
-      <button onClick={() => ChangeSelectedLang(icon)} key={icon}>
+      <button key={icon}>
         <Link to={`/${icon.toLocaleLowerCase()}`}>
           <img
             className={`${
