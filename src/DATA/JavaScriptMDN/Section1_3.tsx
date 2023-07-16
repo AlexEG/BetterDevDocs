@@ -1,6 +1,6 @@
 export default function Section1_3() {
   return (
-    <>
+    <div>
       <h1>A first splash into JavaScript</h1>
 
       <p>
@@ -11,16 +11,16 @@ export default function Section1_3() {
         game, step by step.
       </p>
       <p>
-        We want to set really clear expectations here: You won't be expected to
-        learn JavaScript by the end of this article, or even understand all the
-        code we are asking you to write. Instead, we want to give you an idea of
-        how JavaScript's features work together, and what writing JavaScript
-        feels like. In subsequent articles you'll revisit all the features shown
-        here in a lot more detail, so don't worry if you don't understand it all
-        immediately!
+        We wan0000000000000t to set really clear expectations here: You won't be
+        expected to learn JavaScript by the end of this article, or even
+        understand all the code wvvvvvve are asking you to write. Instead, we
+        want to give you an idea of how JavaScript's features work together, and
+        what writing JavaScript feels like. In subsequent articles you'll
+        revisit all the features shown here in a lot more detail, so don't worry
+        if you don't understand it all immediately!
       </p>
 
-      <h2>Thinking like a programmer</h2>
+      <h2>Thinking like a programmer rrrrrr00000000rrrrrrr 222222</h2>
 
       <p>
         One of the hardest things to learn in programming is not the syntax you
@@ -43,6 +43,6 @@ export default function Section1_3() {
         this article, and review the general process of dissecting it into
         tangible tasks.
       </p>
-    </>
+    </div>
   );
 }

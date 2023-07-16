@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useParams } from "react-router-dom";
 
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Navbar from "../../components/Navbar/Navbar";
@@ -7,7 +8,9 @@ import ArticleContent from "../../components/ArticleContent";
 import JavaScriptSidebarData from "../../DATA/JavaScriptSidebarData";
 import JavaScriptArticleContentData from "../../DATA/JavaScriptArticleContentData";
 
-function JSHome() {
+import Section1_1 from "../../DATA/JavaScriptMDN/Section1_1";
+
+function JSMDN() {
   const [JSHomeState, setJSHomeState] = useState({
     NavbarState: {
       SelectedLang: "JavaScript",
@@ -95,9 +98,10 @@ function JSHome() {
           }
           contentData={JavaScriptArticleContentData}
         />
+        MMMMMDDDDDDNNNNNNNNNN
       </main>
     </div>
   );
 }
 
-export default JSHome;
+export default JSMDN;

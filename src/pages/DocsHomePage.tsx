@@ -8,7 +8,7 @@ function DocsHomePage() {
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga eaque,
         aut quasi, dicta voluptates voluptas dolorum, optio id beatae ducimus
         commodi aliquam! Beatae tempore delectus, sapiente iste pariatur
-        blanditiis deserunt.
+        blanditiis deserunt. 0000 564684961654
       </p>
       <div className="bg-neutral-950 grid grid-cols-4 w-96 rounded-lg p-4 gap-2">
         <img src={Icons.Github} alt="Github" width="64px" />

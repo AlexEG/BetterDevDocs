@@ -2,6 +2,7 @@ import Section1_1 from "./JavaScriptMDN/Section1_1";
 import Section1_2 from "./JavaScriptMDN/Section1_2";
 import Section1_3 from "./JavaScriptMDN/Section1_3";
 import SectionComingSoon from "./SectionComingSoon";
+
 export default {
   MDN: {
     "JavaScript first steps": {
