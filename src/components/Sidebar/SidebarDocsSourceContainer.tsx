@@ -28,6 +28,7 @@ function SidebarDocsSourceContainer({
     // console.log(sectionsTitleAndSubsections[key]);
     components.push(
       <SidebarDocsSourceSection
+        key={key}
         sectionTitle={key}
         subSectionsArr={sectionsTitleAndSubsections[key]}
         whatSubSectionIsOpen={whatSubSectionIsOpen}

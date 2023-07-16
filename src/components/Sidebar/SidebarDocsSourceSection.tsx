@@ -18,6 +18,7 @@ function SidebarDocsSourceSection({
         : "before:bg-neutral-600";
     return (
       <p
+        key={`${sectionTitle}-${subSection}`}
         onClick={() => ChangeSubSectionIsOpen(`${sectionTitle}-${subSection}`)}
         className={`before:absolute relative before:top-0 before:-left-2 pl-1 before:h-full before:w-0.5 py-1 cursor-pointer ${subSectionOpen_CSS}`}
       >

@@ -46,6 +46,7 @@ function Sidebar({ SidebarData }: { SidebarData: object }) {
     // console.log(SidebarData[key]);
     components.push(
       <SidebarDocsSourceContainer
+        key={key}
         DocsSourceName={key}
         isDocsSourceContainerChosen={
           SidebarState.DocsSourceContainerChosen === key
