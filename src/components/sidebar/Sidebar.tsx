@@ -1,43 +1,26 @@
-import { useState } from "react";
 import SidebarMenu from "./SidebarMenu";
 import SidebarDocsSourceContainer from "./SidebarDocsSourceContainer";
 import OpenCloseSidebarBtn from "./OpenCloseSidebarBtn";
+interface Sidebar {
+  SidebarData: object;
+  SidebarState: {
+    isTheSidebarOpen: boolean;
+    DocsSourceContainerChosen: string;
+    DocsSourceContainerChosen_SubSection: string;
+  };
+  openCloseSidebarBtnFunc(): void;
+  chooseDocsSourceContainer(DocsSourceName: string): void;
+  whatSubSectionIsOpenFunc(subSectionFullTitle: string): void;
+}
 
-function Sidebar({ SidebarData }: { SidebarData: object }) {
-  const [SidebarState, setSidebarState] = useState({
-    isTheSidebarOpen: true,
-    DocsSourceContainerChosen: "",
-    DocsSourceContainerChosen_SubSection: "",
-  });
-
-  // <OpenCloseSidebarBtn />[Start]
+function Sidebar({
+  SidebarData,
+  SidebarState,
+  openCloseSidebarBtnFunc,
+  chooseDocsSourceContainer,
+  whatSubSectionIsOpenFunc,
+}: Sidebar) {
   const isTheSidebarOpen_CSS = SidebarState.isTheSidebarOpen ? "w-60" : "w-10";
-  function openCloseSidebarBtnFunc(): void {
-    setSidebarState((prevSidebarState) => ({
-      ...prevSidebarState,
-      isTheSidebarOpen: !prevSidebarState.isTheSidebarOpen,
-    }));
-  }
-  // <OpenCloseSidebarBtn />[End]
-
-  // <SidebarDocsSourceContainer />[Start]
-  function chooseDocsSourceContainer(DocsSourceName: string): void {
-    setSidebarState((prevSidebarState) => ({
-      ...prevSidebarState,
-      DocsSourceContainerChosen: DocsSourceName,
-    }));
-  }
-  // <SidebarDocsSourceContainer />[End]
-
-  // <SidebarDocsSourceSection />[Start]
-  function whatSubSectionIsOpenFunc(subSectionFullTitle: string): void {
-    setSidebarState((prevSidebarState) => ({
-      ...prevSidebarState,
-      DocsSourceContainerChosen_SubSection: subSectionFullTitle,
-    }));
-    // console.log(SidebarState);
-  }
-  // <SidebarDocsSourceSection />[End]
 
   // <SidebarDocsSourceContainer/> Components [Start]
   let components = [];

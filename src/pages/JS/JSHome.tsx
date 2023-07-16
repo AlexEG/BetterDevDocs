@@ -11,8 +11,10 @@ function JSHome() {
       SupSection: "Functions reusable blocks of code",
       SelectedLang: "JavaScript",
     },
-    something: {
-      item: "mmmm",
+    SidebarState: {
+      isTheSidebarOpen: true,
+      DocsSourceContainerChosen: "",
+      DocsSourceContainerChosen_SubSection: "",
     },
   });
 
@@ -26,6 +28,46 @@ function JSHome() {
     });
   }
   // Navbar State [End]
+  // Sidebar State [Start]
+
+  // <OpenCloseSidebarBtn />[Start]
+  function openCloseSidebarBtnFunc(): void {
+    setJSHomeState((JSHomeState) => ({
+      ...JSHomeState,
+      SidebarState: {
+        ...JSHomeState.SidebarState,
+        isTheSidebarOpen: !JSHomeState.SidebarState.isTheSidebarOpen,
+      },
+    }));
+  }
+  // <OpenCloseSidebarBtn />[End]
+
+  // <SidebarDocsSourceContainer />[Start]
+  function chooseDocsSourceContainer(DocsSourceName: string): void {
+    setJSHomeState((JSHomeState) => ({
+      ...JSHomeState,
+      SidebarState: {
+        ...JSHomeState.SidebarState,
+        DocsSourceContainerChosen: DocsSourceName,
+      },
+    }));
+  }
+  // <SidebarDocsSourceContainer />[End]
+
+  // <SidebarDocsSourceSection />[Start]
+  function whatSubSectionIsOpenFunc(subSectionFullTitle: string): void {
+    setJSHomeState((JSHomeState) => ({
+      ...JSHomeState,
+      SidebarState: {
+        ...JSHomeState.SidebarState,
+        DocsSourceContainerChosen_SubSection: subSectionFullTitle,
+      },
+    }));
+    // console.log(SidebarState);
+  }
+  // <SidebarDocsSourceSection />[End]
+
+  // Sidebar State [End]
 
   return (
     <div className="h-screen overflow-hidden ">
@@ -33,7 +75,13 @@ function JSHome() {
         NavbarState={JSHomeState.NavbarState}
         ChangeSelectedLang={(e) => ChangeSelectedLang(e)}
       />
-      <Sidebar SidebarData={JavaScriptSidebarData} />
+      <Sidebar
+        SidebarData={JavaScriptSidebarData}
+        SidebarState={JSHomeState.SidebarState}
+        openCloseSidebarBtnFunc={openCloseSidebarBtnFunc}
+        chooseDocsSourceContainer={(e) => chooseDocsSourceContainer(e)}
+        whatSubSectionIsOpenFunc={(e) => whatSubSectionIsOpenFunc(e)}
+      />
 
       <main className="bg-neutral-800  h-screen py-16  px-72 flex justify-center overflow-y-auto newuitestsidebar ">
         <section className=" text-neutral-950 font-medium bg-neutral-300 max-w-3xl p-4 h-fit after:w-0 after:h-0 after:absolute after:bottom-0 after:right-0 after:border-[1.25rem] after:border-l-transparent after:border-t-transparent  after:border-neutral-800 before:w-0 before:h-0 before:absolute before:top-0 before:left-0 before:border-[1.25rem] before:border-r-transparent before:border-b-transparent  before:border-neutral-800 relative py-8">
