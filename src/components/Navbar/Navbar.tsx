@@ -1,15 +1,18 @@
 import LanguagesTools from "./LanguagesTools";
 import BreadcrumbNavigation from "./BreadcrumbNavigation";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
-function Navbar() {
-  const [NavbarState, setNavbarState] = useState({
-    DocsSourceName: "MDN",
-    Section: "JavaScript building blocks",
-    SupSection: "Functions reusable blocks of code",
-  });
+interface Navbar {
+  NavbarState: {
+    DocsSourceName: string;
+    Section: string;
+    SupSection: string;
+    SelectedLang: string;
+  };
+  ChangeSelectedLang(LangName: string): void;
+}
 
+function Navbar({ NavbarState, ChangeSelectedLang }: Navbar) {
   return (
     <nav className="h-10 bg-neutral-950 flex fixed top-0 w-full left-0 justify-between items-center px-2 z-10 ">
       <div className="flex gap-2">
@@ -37,7 +40,10 @@ function Navbar() {
         />
       </div>
       <div className="flex gap-2">
-        <LanguagesTools />
+        <LanguagesTools
+          ChangeSelectedLang={(e) => ChangeSelectedLang(e)}
+          SelectedLang={NavbarState.SelectedLang}
+        />
       </div>
     </nav>
   );

@@ -1,10 +1,38 @@
+import { useState } from "react";
+
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Navbar from "../../components/Navbar/Navbar";
 import JavaScriptSidebarData from "../../DATA/JavaScriptSidebarData";
 function JSHome() {
+  const [JSHomeState, setJSHomeState] = useState({
+    NavbarState: {
+      DocsSourceName: "MDN",
+      Section: "JavaScript building blocks",
+      SupSection: "Functions reusable blocks of code",
+      SelectedLang: "JavaScript",
+    },
+    something: {
+      item: "mmmm",
+    },
+  });
+
+  // Navbar State [Start]
+  function ChangeSelectedLang(LangName: string): void {
+    setJSHomeState((JSHomeState) => {
+      return {
+        ...JSHomeState,
+        NavbarState: { ...JSHomeState.NavbarState, SelectedLang: LangName },
+      };
+    });
+  }
+  // Navbar State [End]
+
   return (
     <div className="h-screen overflow-hidden ">
-      <Navbar />
+      <Navbar
+        NavbarState={JSHomeState.NavbarState}
+        ChangeSelectedLang={(e) => ChangeSelectedLang(e)}
+      />
       <Sidebar SidebarData={JavaScriptSidebarData} />
 
       <main className="bg-neutral-800  h-screen py-16  px-72 flex justify-center overflow-y-auto newuitestsidebar ">
