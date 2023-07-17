@@ -11,6 +11,9 @@ import JSHome from "./pages/JSHome";
 import TailwindCSSHome from "./pages/TailwindCSSHome";
 import TailwindcssOfficialRoutes from "./DATA/TailwindCSS/TailwindcssOfficialRoutes";
 
+// CSS
+import CSSHome from "./pages/CSSHome";
+import CSSMDNRoutes from "./DATA/CSS/CSSMDNRoutes";
 function App() {
   return (
     <BrowserRouter>
@@ -30,6 +33,10 @@ function App() {
             path="official/*"
             element={<TailwindcssOfficialRoutes />}
           ></Route>
+        </Route>
+
+        <Route path="css" element={<CSSHome />}>
+          <Route path="mdn/*" element={<CSSMDNRoutes />}></Route>
         </Route>
 
         <Route path="*" element={<Page404 />}></Route>
