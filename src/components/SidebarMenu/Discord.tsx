@@ -6,12 +6,12 @@ function Discord() {
   useEffect(() => {
     fetch("https://discord.com/api/guilds/863876547424026625/widget.json")
       .then((res) => res.json())
-      .then((data) => setIsOnline(data.hasOwnProperty("status")));
+      .then((data) => setIsOnline(data.members[0]));
   }, []);
-
+  // console.log(isOnline);
   return (
     <button className="relative">
-      {isOnline && (
+      {isOnline !== undefined && (
         <div className="absolute -top-1 -right-1">
           <span className="relative flex h-3 w-3">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
@@ -22,7 +22,7 @@ function Discord() {
 
       <a
         href="https://discord.com/users/748017288476622960"
-        title="I'm Online Now"
+        title={isOnline !== undefined ? "I'm Online Now" : "I'm Offline"}
         target="_blank"
         referrerPolicy="no-referrer"
       >

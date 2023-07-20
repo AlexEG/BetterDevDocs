@@ -18,7 +18,7 @@ import CSSMDNRoutes from "./DATA/CSS/CSSMDNRoutes";
 
 // Vite
 import ViteHome from "./pages/ViteHome";
-import ViteOfficialRoutes from "./DATA/Template copy/ViteOfficialRoutes";
+import ViteOfficialRoutes from "./DATA/Vite/ViteOfficialRoutes";
 
 function App() {
   return (

@@ -1,6 +1,6 @@
 import HomeTemplate from "../components/HomeTemplate";
 import { Outlet } from "react-router-dom";
-import ViteSidebarData from "../DATA/Template copy/ViteSidebarData";
+import ViteSidebarData from "../DATA/Vite/ViteSidebarData";
 
 function ViteHome() {
   return (

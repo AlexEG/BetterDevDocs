@@ -26,10 +26,10 @@ function SidebarDocsSourceSection({
           .split(" ")
           .join("-")}/${subSection.toLocaleLowerCase().split(" ").join("-")}`}
         className="pt-1 pb-1 last:pb-0 first:pt-0"
+        key={`${sectionTitle}-${subSection}`}
         onClick={() => ChangeSubSectionIsOpen(`${sectionTitle}-${subSection}`)}
       >
         <p
-          key={`${sectionTitle}-${subSection}`}
           className={`before:absolute relative before:top-0 before:-left-3 pl-1 before:h-full before:w-0.5  cursor-pointer ${subSectionOpen_CSS} `}
         >
           {subSection}
