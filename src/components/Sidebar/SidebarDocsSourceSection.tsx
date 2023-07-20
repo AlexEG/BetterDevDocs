@@ -19,7 +19,7 @@ function SidebarDocsSourceSection({
     const subSectionOpen_CSS =
       whatSubSectionIsOpen === `${sectionTitle}-${subSection}`
         ? "before:bg-neutral-50"
-        : "before:bg-neutral-600";
+        : "";
     return (
       <Link
         to={`${DocsSourceName.toLocaleLowerCase()
@@ -31,7 +31,7 @@ function SidebarDocsSourceSection({
           onClick={() =>
             ChangeSubSectionIsOpen(`${sectionTitle}-${subSection}`)
           }
-          className={`before:absolute relative before:top-0 before:-left-2 pl-1 before:h-full before:w-0.5 py-1 cursor-pointer ${subSectionOpen_CSS}`}
+          className={`before:absolute relative before:top-0 before:-left-3 pl-1 before:h-full before:w-0.5 my-1 cursor-pointer ${subSectionOpen_CSS}`}
         >
           {subSection}
         </p>
@@ -41,10 +41,10 @@ function SidebarDocsSourceSection({
   // -------
 
   return (
-    <section className="flex-col flex mb-4 first-of-type:mt-2">
+    <section className="flex-col flex mb-4 first-of-type:mt-2 ">
       <h2 className="text-neutral-50 font-semibold mb-0.5">{sectionTitle}</h2>
 
-      <div className="pl-3 flex flex-col text-neutral-300 select-none text-sm font-normal">
+      <div className="pl-3 flex flex-col text-neutral-300 select-none text-sm font-normal before:absolute relative before:top-0 before:left-0  before:h-full before:w-0.5 before:bg-neutral-600">
         {allSubSections}
       </div>
     </section>

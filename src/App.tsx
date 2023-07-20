@@ -15,6 +15,11 @@ import TailwindcssOfficialRoutes from "./DATA/TailwindCSS/TailwindcssOfficialRou
 // CSS
 import CSSHome from "./pages/CSSHome";
 import CSSMDNRoutes from "./DATA/CSS/CSSMDNRoutes";
+
+// Vite
+import ViteHome from "./pages/ViteHome";
+import ViteOfficialRoutes from "./DATA/Template copy/ViteOfficialRoutes";
+
 function App() {
   return (
     <BrowserRouter>
@@ -39,6 +44,13 @@ function App() {
         <Route path="css" element={<CSSHome />}>
           <Route path="mdn/*" element={<CSSMDNRoutes />}></Route>
         </Route>
+        <Route path="vite" element={<ViteHome />}>
+          <Route path="official/*" element={<ViteOfficialRoutes />}></Route>
+        </Route>
+
+        {/* <Route path="css" element={<CSSHome />}>
+          <Route path="mdn/*" element={<CSSMDNRoutes />}></Route>
+        </Route> */}
 
         <Route path="*" element={<Page404 />}></Route>
       </Routes>
