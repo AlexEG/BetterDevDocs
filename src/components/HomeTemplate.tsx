@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import Sidebar from "../components/Sidebar/Sidebar";
-import Navbar from "../components/Navbar/Navbar";
-import ArticleContent from "../components/ArticleContent";
+import Sidebar from "./Sidebar/Sidebar";
+import Navbar from "./Navbar/Navbar";
+import ArticleContent from "./ArticleContent";
 
 interface HomeTemplate {
   SidebarData: object;
@@ -10,7 +10,7 @@ interface HomeTemplate {
   outlet: React.ReactElement | null;
 }
 function HomeTemplate({ SidebarData, LanguageName, outlet }: HomeTemplate) {
-  const [HomeTemplate, setHomeTemplate] = useState({
+  const [HomeTemplateState, setHomeTemplateState] = useState({
     NavbarState: {
       SelectedLang: LanguageName,
     },
@@ -25,7 +25,7 @@ function HomeTemplate({ SidebarData, LanguageName, outlet }: HomeTemplate) {
 
   // <OpenCloseSidebarBtn />[Start]
   function openCloseSidebarBtnFunc(): void {
-    setHomeTemplate((HomeTemplate) => ({
+    setHomeTemplateState((HomeTemplate) => ({
       ...HomeTemplate,
       SidebarState: {
         ...HomeTemplate.SidebarState,
@@ -37,7 +37,7 @@ function HomeTemplate({ SidebarData, LanguageName, outlet }: HomeTemplate) {
 
   // <SidebarDocsSourceContainer />[Start]
   function chooseDocsSourceContainer(DocsSourceName: string): void {
-    setHomeTemplate((HomeTemplate) => ({
+    setHomeTemplateState((HomeTemplate) => ({
       ...HomeTemplate,
       SidebarState: {
         ...HomeTemplate.SidebarState,
@@ -50,7 +50,7 @@ function HomeTemplate({ SidebarData, LanguageName, outlet }: HomeTemplate) {
 
   // <SidebarDocsSourceSection />[Start]
   function ChangeSubSectionIsOpen(subSectionFullTitle: string): void {
-    setHomeTemplate((HomeTemplate) => ({
+    setHomeTemplateState((HomeTemplate) => ({
       ...HomeTemplate,
       SidebarState: {
         ...HomeTemplate.SidebarState,
@@ -64,21 +64,27 @@ function HomeTemplate({ SidebarData, LanguageName, outlet }: HomeTemplate) {
   return (
     <div className="h-screen overflow-hidden ">
       <Navbar
-        NavbarState={HomeTemplate.NavbarState}
-        DocsSourceName={HomeTemplate.SidebarState.DocsSourceContainerChosen}
+        NavbarState={HomeTemplateState.NavbarState}
+        DocsSourceName={
+          HomeTemplateState.SidebarState.DocsSourceContainerChosen
+        }
         SectionAndSubSection={
-          HomeTemplate.SidebarState.DocsSourceContainerChosen_SubSection
+          HomeTemplateState.SidebarState.DocsSourceContainerChosen_SubSection
         }
       />
       <Sidebar
         SidebarData={SidebarData}
-        SidebarState={HomeTemplate.SidebarState}
+        SidebarState={HomeTemplateState.SidebarState}
         openCloseSidebarBtnFunc={openCloseSidebarBtnFunc}
         chooseDocsSourceContainer={(e) => chooseDocsSourceContainer(e)}
         ChangeSubSectionIsOpen={(e) => ChangeSubSectionIsOpen(e)}
       />
 
-      <main className="bg-neutral-800  h-screen py-16  px-72 flex justify-center overflow-y-auto newuitestsidebar ">
+      <main
+        className={`bg-neutral-800 h-screen pt-10 pb-20 ${
+          HomeTemplateState.SidebarState.isTheSidebarOpen ? " pl-60 " : "pl-10 "
+        } flex justify-center overflow-y-auto newuitestsidebar `}
+      >
         <ArticleContent contentData={outlet} />
       </main>
     </div>

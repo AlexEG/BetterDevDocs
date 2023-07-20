@@ -5,7 +5,8 @@ import Page404 from "./pages/Page404";
 // JavaScript
 import JSMDNRoutes from "./DATA/JS/JavaScriptMDNRoutes";
 import JavaScriptW3SchoolRoutes from "./DATA/JS/JavaScriptW3SchoolRoutes";
-import JSHome from "./pages/JSHome";
+
+import JavaScriptHome from "./pages/JavaScriptHome";
 
 // TailwindCSS
 import TailwindCSSHome from "./pages/TailwindCSSHome";
@@ -20,7 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<DocsHomePage />}></Route>
 
-        <Route path="javascript" element={<JSHome />}>
+        <Route path="javascript" element={<JavaScriptHome />}>
           <Route path="mdn/*" element={<JSMDNRoutes />}></Route>
           <Route
             path="w3-school/*"

@@ -1,4 +1,4 @@
-import SidebarMenu from "./SidebarMenu";
+import SidebarMenu from "../SidebarMenu/SidebarMenu";
 import SidebarDocsSourceContainer from "./SidebarDocsSourceContainer";
 import OpenCloseSidebarBtn from "./OpenCloseSidebarBtn";
 interface Sidebar {
@@ -47,7 +47,7 @@ function Sidebar({
 
   return (
     <aside
-      className={`bg-neutral-950 h-[calc(100%-2.5rem)] fixed top-10 left-0 after:w-0 after:h-0 after:absolute after:top-0 after:right-0 after:border-[1.25rem] after:border-r-transparent after:border-b-transparent after:translate-x-full after:border-neutral-950 pt-10 ${isTheSidebarOpen_CSS}`}
+      className={`bg-neutral-950 h-[calc(100%-2.5rem)] fixed top-10 left-0 after:w-0 after:h-0 after:absolute after:top-0 after:right-0 after:border-[1.25rem] after:border-r-transparent after:border-b-transparent after:translate-x-full after:border-neutral-950 pt-10 transition-all delay-75 duration-500 z-10 ${isTheSidebarOpen_CSS}`}
     >
       <OpenCloseSidebarBtn
         isTheSidebarOpen={SidebarState.isTheSidebarOpen}
