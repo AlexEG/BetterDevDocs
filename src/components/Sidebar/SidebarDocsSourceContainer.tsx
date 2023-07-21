@@ -6,7 +6,7 @@ interface SidebarDocsSourceContainer {
   chooseDocsSourceContainer(DocsSourceName: string): void;
   whatSubSectionIsOpen: string;
   ChangeSubSectionIsOpen(subSectionFullTitle: string): void;
-  sectionsTitleAndSubsections: object;
+  sectionsTitleAndSubsections: any;
 }
 function SidebarDocsSourceContainer({
   DocsSourceName,

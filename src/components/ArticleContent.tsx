@@ -12,7 +12,7 @@ function ArticleContent({ contentData }: ArticleContent) {
     isExpand: false,
   });
 
-  const postWidth = postState.isExpand ? "max-w-6xl" : "max-w-3xl";
+  const postWidth = postState.isExpand ? "max-w-6xl" : "max-w-2xl";
   const PostDarkMode = postState.DarkMode
     ? "bg-zinc-950 text-neutral-200 selection:bg-neutral-200 selection:text-neutral-950"
     : "bg-neutral-200 selection:bg-neutral-600 selection:text-neutral-200";

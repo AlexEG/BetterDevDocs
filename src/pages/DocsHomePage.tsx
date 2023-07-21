@@ -23,7 +23,9 @@ function DocsHomePage() {
         </Link>
         {/* <img src={Icons.Markdown} alt="Markdown" width="64px" /> */}
         {/* <img src={Icons.framerMotion} alt="framerMotion" width="64px" /> */}
-        <img src={Icons.Vite} alt="Vite" width="64px" />
+        <Link to="/vite">
+          <img src={Icons.Vite} alt="Vite" width="64px" />
+        </Link>
         <img src={Icons.VSCode} alt="VSCode" width="64px" />
         {/* <img src={Icons.TypeScript} alt="TypeScript" width="64px" /> */}
         <Link to="tailwindcss">

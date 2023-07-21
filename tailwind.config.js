@@ -11,6 +11,10 @@ import { closeLang } from "./src/components/ReadingSettingsMenu/Animation";
 import { closeLangContainer } from "./src/components/ReadingSettingsMenu/Animation";
 import { openLangContainer } from "./src/components/ReadingSettingsMenu/Animation";
 //* ---------- ---------- *//
+//* ----------[ Settings ]---------- *//
+import { openSettings } from "./src/components/Settings/Ainmation";
+import { closeSettings } from "./src/components/Settings/Ainmation";
+//* ---------- ---------- *//
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -23,6 +27,9 @@ export default {
         closeLang,
         closeLangContainer,
         openLangContainer,
+        //* ----------[ Settings ]---------- *//
+        openSettings,
+        closeSettings,
       },
       dropShadow: {
         imageDownloadBtn: "0 0 10px rgba(147 51 234 / 1)",

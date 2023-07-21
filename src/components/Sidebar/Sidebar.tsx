@@ -1,16 +1,20 @@
 import SidebarMenu from "../SidebarMenu/SidebarMenu";
 import SidebarDocsSourceContainer from "./SidebarDocsSourceContainer";
 import OpenCloseSidebarBtn from "./OpenCloseSidebarBtn";
+import Settings from "../Settings/Settings";
+
 interface Sidebar {
   SidebarData: object;
   SidebarState: {
     isTheSidebarOpen: boolean;
     DocsSourceContainerChosen: string;
     DocsSourceContainerChosen_SubSection: string;
+    isSettingsOpen: boolean;
   };
   openCloseSidebarBtnFunc(): void;
   chooseDocsSourceContainer(DocsSourceName: string): void;
   ChangeSubSectionIsOpen(subSectionFullTitle: string): void;
+  OpenCloseSettings(): void;
 }
 
 function Sidebar({
@@ -19,16 +23,14 @@ function Sidebar({
   openCloseSidebarBtnFunc,
   chooseDocsSourceContainer,
   ChangeSubSectionIsOpen,
+  OpenCloseSettings,
 }: Sidebar) {
   const isTheSidebarOpen_CSS = SidebarState.isTheSidebarOpen ? "w-60" : "w-10";
 
-  // console.log(JavaScriptSidebarData);
-  // console.log(JavaScriptArticleContentData);
   // <SidebarDocsSourceContainer/> Components [Start]
+
   let components = [];
   for (const key in SidebarData) {
-    // console.log(key);
-    // console.log(SidebarData[key]);
     components.push(
       <SidebarDocsSourceContainer
         key={key}
@@ -61,7 +63,8 @@ function Sidebar({
             {components}
           </div>
 
-          <SidebarMenu />
+          <Settings isSettingsOpen={SidebarState.isSettingsOpen} />
+          <SidebarMenu OpenCloseSettings={OpenCloseSettings} />
         </>
       )}
     </aside>

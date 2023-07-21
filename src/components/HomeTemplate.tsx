@@ -18,6 +18,7 @@ function HomeTemplate({ SidebarData, LanguageName, outlet }: HomeTemplate) {
       isTheSidebarOpen: true,
       DocsSourceContainerChosen: "",
       DocsSourceContainerChosen_SubSection: "",
+      isSettingsOpen: false,
     },
   });
 
@@ -59,6 +60,19 @@ function HomeTemplate({ SidebarData, LanguageName, outlet }: HomeTemplate) {
     }));
   }
   // <SidebarDocsSourceSection />[End]
+
+  // Open Close <Settings/> [Start]
+
+  function OpenCloseSettings() {
+    setHomeTemplateState((HomeTemplate) => ({
+      ...HomeTemplate,
+      SidebarState: {
+        ...HomeTemplate.SidebarState,
+        isSettingsOpen: !HomeTemplate.SidebarState.isSettingsOpen,
+      },
+    }));
+  }
+  // Open Close <Settings/> [End]
   // Sidebar State [End]
 
   return (
@@ -78,6 +92,7 @@ function HomeTemplate({ SidebarData, LanguageName, outlet }: HomeTemplate) {
         openCloseSidebarBtnFunc={openCloseSidebarBtnFunc}
         chooseDocsSourceContainer={(e) => chooseDocsSourceContainer(e)}
         ChangeSubSectionIsOpen={(e) => ChangeSubSectionIsOpen(e)}
+        OpenCloseSettings={OpenCloseSettings}
       />
 
       <main

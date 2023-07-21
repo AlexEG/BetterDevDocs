@@ -13,6 +13,11 @@ hljs.registerLanguage("css", css);
 import typescript from "highlight.js/lib/languages/typescript";
 hljs.registerLanguage("typescript", typescript);
 
+import bash from "highlight.js/lib/languages/bash";
+hljs.registerLanguage("bash", bash);
+import json from "highlight.js/lib/languages/json";
+hljs.registerLanguage("json", json);
+
 interface HighlighterProps {
   content: string;
   language?: string;
