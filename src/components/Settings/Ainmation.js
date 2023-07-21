@@ -1,5 +1,5 @@
 export const openSettings = {
-  "100%": { visibility: "visible" },
+  "0%": { visibility: "visible" },
   "100%": { transform: "translateY(0)" },
 };
 export const closeSettings = {

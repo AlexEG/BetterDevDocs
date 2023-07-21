@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 function Discord() {
   const [isOnline, setIsOnline] = useState(undefined);
 
-  // TODO it's not loading in real time
   useEffect(() => {
     fetch("https://discord.com/api/guilds/863876547424026625/widget.json")
       .then((res) => res.json())

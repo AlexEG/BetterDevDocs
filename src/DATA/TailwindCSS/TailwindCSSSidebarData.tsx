@@ -1,5 +1,5 @@
 export default {
-  Official: {
+  "tailwindcss.com": {
     Customization: [
       "Theme",
       "Preflight",
