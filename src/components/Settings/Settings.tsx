@@ -1,9 +1,36 @@
+import { useState } from "react";
+import SettingsCheckbox from "./SettingsCheckbox";
+import SettingsSelect from "./SettingsSelect";
 interface Section {
   isSettingsOpen: boolean;
 }
-function Settings({ isSettingsOpen }: Section) {
-  // OPEN CLOSE CSS ANIMATION
 
+function Settings({ isSettingsOpen }: Section) {
+  const [SettingsState, setSettingsState] = useState({
+    pageNavbarEnable: true,
+    appTheme: "theme1",
+    isReadingSettingsMenuOpen: true,
+    addToFavoriteEnable: true,
+    translateArticleEnable: true,
+    lightDarkArticleEnable: true,
+    expandShrinkArticleEnable: true,
+  });
+  console.log(SettingsState);
+
+  function changeSettings(event: any) {
+    console.log(event.target);
+
+    const { name, value, type, checked } = event.target;
+
+    setSettingsState((prevSettingsState) => {
+      return {
+        ...prevSettingsState,
+        [name]: type === "checkbox" ? checked : value,
+      };
+    });
+  }
+
+  // OPEN CLOSE CSS ANIMATION
   const [open, close] = [
     "animate-[openSettings_1000ms_ease-in-out_1_forwards]",
     "animate-[closeSettings_1000ms_ease-in-out_1_forwards]",
@@ -16,38 +43,136 @@ function Settings({ isSettingsOpen }: Section) {
     >
       <p className="text-center text-neutral-400 font-medium my-1">Settings</p>
 
-      <div className="px-2 text-neutral-300">
-        <input
-          className="mr-2 accent-neutral-950 "
-          type="checkbox"
-          id="page-navbar"
-          // checked={formData.isFriendly}
-          // onChange={handleChange}
-        />
-        <label htmlFor="page-navbar" className="select-none">
-          Page Navbar Enable
-        </label>
-      </div>
+      <SettingsCheckbox
+        label=" Page Navbar Enable"
+        name="pageNavbarEnable"
+        func={changeSettings}
+        state={SettingsState.pageNavbarEnable}
+      />
 
-      <br />
-      <div className="px-2">
-        <select
-          id="apptheme"
-          // value={formData.favColor}
-          // onChange={handleChange}
-          name="app-theme"
-          className=""
-        >
-          <option value="theme1"> Theme 1 </option>
-          <option value="theme2">Theme 2</option>
-          <option value="theme3">Theme 3</option>
-        </select>
-        <label
-          htmlFor="app-theme"
-          className="select-none ml-2 text-neutral-300"
-        >
-          Theme
-        </label>
+      <SettingsSelect
+        label="Theme"
+        name="appTheme"
+        func={changeSettings}
+        state={SettingsState.appTheme}
+        options={["Theme 1", "Theme 2", "Theme 3"]}
+      />
+
+      <p className="text-center text-xs mt-3 mb-1 text-neutral-200 ">
+        -- Reading Settings Menu --
+      </p>
+
+      <SettingsCheckbox
+        label="Reading Settings Menu"
+        name="isReadingSettingsMenuOpen"
+        func={changeSettings}
+        state={SettingsState.isReadingSettingsMenuOpen}
+      />
+
+      {/* ------- */}
+      <div
+        className={
+          SettingsState.isReadingSettingsMenuOpen
+            ? ""
+            : "opacity-25 after:w-full after:h-full after:absolute after:top-0 after:left-0 relative z-10"
+        }
+      >
+        <div className="flex gap-2 justify-between pr-2 mb-0.5">
+          <SettingsCheckbox
+            label="Add To Favorite"
+            name="addToFavoriteEnable"
+            func={changeSettings}
+            state={SettingsState.addToFavoriteEnable}
+          />
+          <button className="bg-neutral-950 rounded-full p-1 w-8 h-8 cursor-default">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.3}
+              stroke="#fafafa"
+              className="w-6 h-6 p-px"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div className="flex gap-2 justify-between pr-2 mb-0.5">
+          <SettingsCheckbox
+            label="Translate Article"
+            name="lightDarkArticleEnable"
+            func={changeSettings}
+            state={SettingsState.lightDarkArticleEnable}
+          />
+          <button className="bg-neutral-950 rounded-full p-1 w-8 h-8 cursor-default">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.3}
+              stroke="#fafafa"
+              className="w-6 h-6 p-px"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"
+              />
+            </svg>
+          </button>
+        </div>
+        <div className="flex gap-2 justify-between pr-2 mb-0.5">
+          <SettingsCheckbox
+            label="Light/Dark Article"
+            name="translateArticleEnable"
+            func={changeSettings}
+            state={SettingsState.translateArticleEnable}
+          />
+          <button className="bg-neutral-950 rounded-full p-1 w-8 h-8 cursor-default">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.3}
+              stroke="#fafafa"
+              className="w-6 h-6 p-px"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div className="flex gap-2 justify-between pr-2 mb-0.5">
+          <SettingsCheckbox
+            label="Expand/Shrink Article"
+            name="expandShrinkArticle"
+            func={changeSettings}
+            state={SettingsState.expandShrinkArticleEnable}
+          />
+          <button className="bg-neutral-950 rounded-full p-1 w-8 h-8 cursor-default">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.3}
+              stroke="#fafafa"
+              className="w-6 h-6 p-px"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
   );

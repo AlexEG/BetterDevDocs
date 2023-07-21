@@ -1,5 +1,5 @@
 export default {
-  "Vitejs.dev": {
+  Official: {
     Guide: [
       "Why Vite",
       "Getting Started",
