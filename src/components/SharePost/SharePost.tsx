@@ -4,8 +4,8 @@ interface SharePost {
 
 function SharePost({ isSharePostOpen }: SharePost) {
   const [open, close] = [
-    "animate-[openSettings_1000ms_ease-in-out_1_forwards]",
-    "animate-[closeSettings_1000ms_ease-in-out_1_forwards]",
+    "animate-[openSettings_800ms_ease-in-out_1_forwards]",
+    "animate-[closeSettings_800ms_ease-in-out_1_forwards]",
   ];
   const openCloseCSS = isSharePostOpen ? open : close;
 
