@@ -8,7 +8,7 @@ interface SettingsSelect {
 
 function SettingsSelect({ label, name, state, func, options }: SettingsSelect) {
   const allOptions = options.map((option) => (
-    <option value={option} className="even:bg-neutral-500">
+    <option key={option} value={option} className="even:bg-neutral-500">
       {option}
     </option>
   ));

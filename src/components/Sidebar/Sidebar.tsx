@@ -2,6 +2,7 @@ import SidebarMenu from "../SidebarMenu/SidebarMenu";
 import SidebarDocsSourceContainer from "./SidebarDocsSourceContainer";
 import OpenCloseSidebarBtn from "./OpenCloseSidebarBtn";
 import Settings from "../Settings/Settings";
+import SharePost from "../SharePost/SharePost";
 
 interface Sidebar {
   SidebarData: object;
@@ -10,11 +11,13 @@ interface Sidebar {
     DocsSourceContainerChosen: string;
     DocsSourceContainerChosen_SubSection: string;
     isSettingsOpen: boolean;
+    isSharePostOpen: boolean;
   };
   openCloseSidebarBtnFunc(): void;
   chooseDocsSourceContainer(DocsSourceName: string): void;
   ChangeSubSectionIsOpen(subSectionFullTitle: string): void;
   OpenCloseSettings(): void;
+  OpenCloseSharePost(): void;
 }
 
 function Sidebar({
@@ -24,6 +27,7 @@ function Sidebar({
   chooseDocsSourceContainer,
   ChangeSubSectionIsOpen,
   OpenCloseSettings,
+  OpenCloseSharePost,
 }: Sidebar) {
   const isTheSidebarOpen_CSS = SidebarState.isTheSidebarOpen ? "w-60" : "w-10";
 
@@ -63,8 +67,12 @@ function Sidebar({
             {components}
           </div>
 
+          <SharePost isSharePostOpen={SidebarState.isSharePostOpen} />
           <Settings isSettingsOpen={SidebarState.isSettingsOpen} />
-          <SidebarMenu OpenCloseSettings={OpenCloseSettings} />
+          <SidebarMenu
+            OpenCloseSettings={OpenCloseSettings}
+            OpenCloseSharePost={OpenCloseSharePost}
+          />
         </>
       )}
     </aside>
