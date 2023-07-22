@@ -1,4 +1,4 @@
-import Note from "../../../components/Note";
+import Note from "../../../components/HTML/Note";
 export default function JS_MDN_1_1() {
   return (
     <div>

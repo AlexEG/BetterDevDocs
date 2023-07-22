@@ -9,7 +9,8 @@ interface Section {
 function Settings({ isSettingsOpen }: Section) {
   const [SettingsState, setSettingsState] = useState({
     pageNavbarEnable: false,
-    appTheme: "theme1",
+    appTheme: "theme 1",
+    codeHighlight: "GitHub Dark",
     isReadingSettingsMenuOpen: true,
     addToFavoriteEnable: true,
     translateArticleEnable: true,
@@ -58,7 +59,7 @@ function Settings({ isSettingsOpen }: Section) {
 
   return (
     <section
-      className={`bg-neutral-700 absolute bottom-10 left-0 w-full h-96  translate-y-full ${openCloseCSS} `}
+      className={`bg-neutral-700 absolute bottom-10 left-0 w-full h-fit translate-y-full ${openCloseCSS} `}
     >
       <p className="text-center text-neutral-400 font-medium my-1">Settings</p>
 
@@ -75,6 +76,14 @@ function Settings({ isSettingsOpen }: Section) {
         func={changeSettings}
         state={SettingsState.appTheme}
         options={["Theme 1", "Theme 2", "Theme 3"]}
+      />
+
+      <SettingsSelect
+        label="Code Highlight"
+        name="codeHighlight"
+        func={changeSettings}
+        state={SettingsState.codeHighlight}
+        options={["Monokai Sublime", "GitHub Dark", "Atom one Dark"]}
       />
 
       <p className="text-center text-xs mt-3 mb-1 text-neutral-200">

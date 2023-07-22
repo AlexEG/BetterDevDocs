@@ -1,4 +1,4 @@
-import DownloadBtn from "./DownloadBtn";
+import DownloadBtn from "../DownloadBtn";
 function Img({ src }: { src: string }) {
   return (
     <div className="relative group w-fit mx-auto my-2">

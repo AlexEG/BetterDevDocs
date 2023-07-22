@@ -1,5 +1,5 @@
-import Img from "../../../components/Img";
-import CodeBlock from "../../../components/CodeBlock";
+import Img from "../../../components/HTML/Img";
+import CodeBlock from "../../../components/HTML/CodeBlock";
 
 export default function Vite_Official_1_2() {
   const code1 = `$ npm create vite@latest`;

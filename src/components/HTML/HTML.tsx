@@ -1,12 +1,12 @@
-import Img from "../Img";
-import P from "../P";
-import H2 from "../H2";
-import H3 from "../H3";
-import Title from "../Title";
-import CodeBlock from "../CodeBlock";
-import Hr from "../Hr";
-import Note from "../Note";
-import ImgsGroup from "../ImgsGroup";
+import Img from "./Img";
+import P from "./P";
+import H2 from "./H2";
+import H3 from "./H3";
+import Title from "./Title";
+import CodeBlock from "./CodeBlock";
+import Hr from "./Hr";
+import Note from "./Note";
+import ImgsGroup from "./ImgsGroup";
 
 export default {
   img(src: string) {

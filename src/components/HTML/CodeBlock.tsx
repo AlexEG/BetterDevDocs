@@ -24,8 +24,8 @@ interface HighlighterProps {
   filePath?: string;
 }
 
-import DownloadBtn from "./DownloadBtn";
-import CopyToClipboard from "./CopyToClipboard";
+import DownloadBtn from "../DownloadBtn";
+import CopyToClipboard from "../CopyToClipboard";
 
 function CodeBlock({
   content,

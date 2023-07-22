@@ -1,6 +1,6 @@
 import BookCover from "../../../components/BookCover";
-import Img from "../../../components/Img";
-import CodeBlock from "../../../components/CodeBlock";
+import Img from "../../../components/HTML/Img";
+import CodeBlock from "../../../components/HTML/CodeBlock";
 import image1 from ".././../../assets/test images/Screenshot_1.png";
 import book1 from "../../../assets/books-covers/You-Don't-Know-JS-Up-&-Going.png";
 
