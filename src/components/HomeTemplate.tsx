@@ -106,7 +106,7 @@ function HomeTemplate({ SidebarData, LanguageName, outlet }: HomeTemplate) {
       />
 
       <main
-        className={`bg-neutral-800 h-screen pt-10 pb-20 ${
+        className={`bg-[#1f1f1f] h-screen pt-10 pb-20 ${
           HomeTemplateState.SidebarState.isTheSidebarOpen ? " pl-60 " : "pl-10 "
         } flex justify-center overflow-y-auto newuitestsidebar `}
       >

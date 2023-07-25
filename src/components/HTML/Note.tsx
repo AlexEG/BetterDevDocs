@@ -10,7 +10,7 @@ function Note({ content }: Note) {
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={1.5}
-        stroke="rgb(30 64 175)"
+        stroke="rgb(29 78 216)"
         className="w-6 h-6 absolute top-1 left-2"
       >
         <path
