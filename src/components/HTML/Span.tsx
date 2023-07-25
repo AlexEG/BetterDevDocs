@@ -20,6 +20,10 @@ function Span({ content }: Span) {
       content.slice(KeywordEndAt + 2),
     ];
   }
-  return <span className="mb-6">{content}</span>;
+  return (
+    <span className="mb-6 selection:bg-neutral-600/75 selection:text-neutral-50">
+      {content}
+    </span>
+  );
 }
 export default Span;

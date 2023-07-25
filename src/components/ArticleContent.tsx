@@ -15,7 +15,7 @@ function ArticleContent({ contentData }: ArticleContent) {
   const postWidth = postState.isExpand ? "max-w-6xl" : "max-w-2xl";
   const PostDarkMode = postState.DarkMode
     ? "bg-neutral-800 text-neutral-300 selection:bg-neutral-200 selection:text-neutral-950"
-    : "text-[#bfbfbf] selection:bg-neutral-600 selection:text-neutral-200";
+    : "text-[#bfbfbf]";
 
   return (
     <article

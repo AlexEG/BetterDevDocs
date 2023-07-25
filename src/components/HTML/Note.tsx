@@ -4,7 +4,7 @@ interface Note {
 
 function Note({ content }: Note) {
   return (
-    <p className="bg-blue-800/25 pl-10 py-2 relative before:absolute before:w-1 before:h-full before:top-0 before:left-0 before:bg-blue-800 my-4 font-normal text-blue-500 selection:bg-blue-950 selection:text-blue-50">
+    <p className="bg-blue-800/25 pl-10 py-2 relative before:absolute before:w-1 before:h-full before:top-0 before:left-0 before:bg-blue-800 my-4 text-blue-500 selection:bg-blue-950 selection:text-blue-50">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
