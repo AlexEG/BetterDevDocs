@@ -12,44 +12,40 @@ export default function JS_W3School_1_1() {
         "This tutorial will teach you JavaScript from basic to advanced.",
       ])}
 
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
+      {HTML.h2("Examples in Each Chapter")}
+
+      {HTML.p(
+        'With our "Try it Yourself" editor, you can edit the source code and view the result.',
+      )}
+
+      {HTML.warning(
+        "This Feature is not available at the moment in BetterDevDocs",
+      )}
+
+      {HTML.p}
+      {HTML.p}
+      {HTML.p}
+      {HTML.p}
+      {HTML.p}
+      {HTML.p}
+      {HTML.p}
+      {HTML.p}
+      {HTML.p}
+      {HTML.p}
+      {HTML.p}
+      {HTML.p}
+      {HTML.p}
+      {HTML.p}
+      {HTML.p}
+      {HTML.p}
+      {HTML.p}
+      {HTML.p}
+      {HTML.p}
+      {HTML.p}
+      {HTML.p}
+      {HTML.p}
+      {HTML.p}
+      {HTML.p}
     </>
   );
 }

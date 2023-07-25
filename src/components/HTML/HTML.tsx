@@ -7,6 +7,8 @@ import CodeBlock from "./CodeBlock";
 import Hr from "./Hr";
 import Note from "./Note";
 import MultiLineNote from "./MultiLineNote";
+import Warning from "./Warning";
+import MultiLineWarning from "./MultiLineWarning";
 import ImgsGroup from "./ImgsGroup";
 
 export default {
@@ -35,6 +37,12 @@ export default {
   },
   mlnote(content: string[]) {
     return <MultiLineNote content={content} />;
+  },
+  warning(content: string) {
+    return <Warning content={content} />;
+  },
+  mlwarning(content: string[]) {
+    return <MultiLineWarning content={content} />;
   },
   hr() {
     return <Hr />;
