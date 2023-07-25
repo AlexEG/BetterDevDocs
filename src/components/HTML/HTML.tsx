@@ -1,5 +1,6 @@
 import Img from "./Img";
 import P from "./P";
+import Span from "./Span";
 import H2 from "./H2";
 import H3 from "./H3";
 import Title from "./Title";
@@ -11,12 +12,16 @@ import Warning from "./Warning";
 import MultiLineWarning from "./MultiLineWarning";
 import ImgsGroup from "./ImgsGroup";
 import CodeKeyword from "./CodeKeyword";
+
 export default {
   img(src: string) {
     return <Img src={src} />;
   },
   p(content: string) {
     return <P content={content} />;
+  },
+  span(content: string) {
+    return <Span content={content} />;
   },
   h1(content: string) {
     return <Title content={content} />;

@@ -28,7 +28,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .newuitestsidebar::-webkit-scrollbar-track {
-  background: #262626;
+  background: #1f1f1f;
   margin-top: 2.5rem;
 }
 

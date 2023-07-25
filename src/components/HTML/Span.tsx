@@ -1,9 +1,9 @@
-interface P {
+interface Span {
   content: any;
 }
 import CodeKeyword from "./CodeKeyword";
 
-function P({ content }: P) {
+function Span({ content }: Span) {
   if (content.includes("[[") && content.includes("]]")) {
     const [keywordStartAt, KeywordEndAt] = [
       content.indexOf("[["),
@@ -12,16 +12,6 @@ function P({ content }: P) {
 
     const keyword = content.slice(keywordStartAt + 2, KeywordEndAt);
 
-    // console.log(keywordStartAt);
-    // console.log(KeywordEndAt);
-
-    // console.log(
-    //   `${content.slice(0, keywordStartAt)} ${keyword} ${content.slice(
-    //     KeywordEndAt,
-    //     -2,
-    //   )}`,
-    // );
-
     content = [
       content.slice(0, keywordStartAt),
       " ",
@@ -29,9 +19,7 @@ function P({ content }: P) {
       " ",
       content.slice(KeywordEndAt + 2),
     ];
-
-    // console.log(content);
   }
-  return <p className="mb-6">{content}</p>;
+  return <span className="mb-6">{content}</span>;
 }
-export default P;
+export default Span;
