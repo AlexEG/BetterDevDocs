@@ -18,14 +18,14 @@ function SidebarDocsSourceSection({
   const allSubSections = subSectionsArr.map((subSection) => {
     const subSectionOpen_CSS =
       whatSubSectionIsOpen === `${sectionTitle}-${subSection}`
-        ? "before:bg-neutral-50"
+        ? "before:bg-neutral-50 font-medium"
         : "";
     return (
       <Link
         to={`${DocsSourceName.toLocaleLowerCase()
           .split(" ")
           .join("-")}/${subSection.toLocaleLowerCase().split(" ").join("-")}`}
-        className="pt-1 pb-1 last:pb-0 first:pt-0"
+        className="pt-1 pb-1 last:pb-0 first:pt-0 "
         key={`${sectionTitle}-${subSection}`}
         onClick={() => ChangeSubSectionIsOpen(`${sectionTitle}-${subSection}`)}
       >

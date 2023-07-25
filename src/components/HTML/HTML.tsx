@@ -6,6 +6,7 @@ import Title from "./Title";
 import CodeBlock from "./CodeBlock";
 import Hr from "./Hr";
 import Note from "./Note";
+import MultiLineNote from "./MultiLineNote";
 import ImgsGroup from "./ImgsGroup";
 
 export default {
@@ -31,6 +32,9 @@ export default {
   },
   note(content: string) {
     return <Note content={content} />;
+  },
+  mlnote(content: string[]) {
+    return <MultiLineNote content={content} />;
   },
   hr() {
     return <Hr />;
