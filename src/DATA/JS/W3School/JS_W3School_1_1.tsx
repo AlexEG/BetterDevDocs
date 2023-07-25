@@ -3,7 +3,12 @@ import HTML from "../../../components/HTML/HTML";
 export default function JS_W3School_1_1() {
   return (
     <>
-      {HTML.h1("JavaScript Tutorial")}
+      {HTML.h1("JavaScript Introduction")}
+      {HTML.h2("JavaScript Can Change HTML Content")}
+
+      {HTML.p(`One of many JavaScript HTML methods is [[getElementById()]]`)}
+
+      {/* {HTML.keyword("getElementById()")} */}
 
       {HTML.mlnote([
         "JavaScript is the world's most popular programming language.",

@@ -10,7 +10,7 @@ import MultiLineNote from "./MultiLineNote";
 import Warning from "./Warning";
 import MultiLineWarning from "./MultiLineWarning";
 import ImgsGroup from "./ImgsGroup";
-
+import CodeKeyword from "./CodeKeyword";
 export default {
   img(src: string) {
     return <Img src={src} />;
@@ -31,6 +31,9 @@ export default {
     return (
       <CodeBlock language={language} content={content} filePath={filePath} />
     );
+  },
+  keyword(content: string) {
+    return <CodeKeyword content={content} />;
   },
   note(content: string) {
     return <Note content={content} />;

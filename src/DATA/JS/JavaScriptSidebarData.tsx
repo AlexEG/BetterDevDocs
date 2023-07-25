@@ -36,7 +36,6 @@ export default {
 
   "W3 School": {
     "JS Tutorial": [
-      "JS Home",
       "JS Introduction",
       "JS Where To",
       "JS Output",
