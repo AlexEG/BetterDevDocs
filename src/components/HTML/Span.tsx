@@ -1,7 +1,7 @@
+import CodeKeyword from "./CodeKeyword";
 interface Span {
   content: any;
 }
-import CodeKeyword from "./CodeKeyword";
 
 function Span({ content }: Span) {
   if (content.includes("[[") && content.includes("]]")) {

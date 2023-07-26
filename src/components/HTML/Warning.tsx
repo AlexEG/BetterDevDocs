@@ -4,7 +4,7 @@ interface Warning {
 
 function Warning({ content }: Warning) {
   return (
-    <p className="bg-pink-800/25 pl-10 py-2 relative before:absolute before:w-1 before:h-full before:top-0 before:left-0 before:bg-pink-800 my-4 font-normal text-pink-500 selection:bg-pink-950 selection:text-pink-50">
+    <p className="bg-pink-800/25 pl-10 py-2 relative before:absolute before:w-1 before:h-full before:top-0 before:left-0 before:bg-pink-800 my-4 font-normal text-pink-500 selection:bg-pink-950 selection:text-pink-50 text-base">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"

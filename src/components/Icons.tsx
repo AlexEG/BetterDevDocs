@@ -2,7 +2,7 @@ import CSS_Icon from "../assets/icons/CSS.svg";
 // import Electron_Icon from "../assets/icons/Electron.svg";
 // import Firebase_Icon from "../assets/icons/Firebase-Dark.svg";
 import Github_Icon from "../assets/icons/Github-Dark.svg";
-// import GoLang_Icon from "../assets/icons/GoLang.svg";
+import GoLang_Icon from "../assets/icons/GoLang.svg";
 import HTML_Icon from "../assets/icons/HTML.svg";
 import JS_Icon from "../assets/icons/JavaScript.svg";
 // import Markdown_Icon from "../assets/icons/Markdown-Dark.svg";
@@ -25,7 +25,7 @@ export default {
   // React: React_Icon,
   // Electron: Electron_Icon,
   // Firebase: Firebase_Icon,
-  // GoLang: GoLang_Icon,
+  GoLang: GoLang_Icon,
   // framerMotion: framerMotion_Icon,
   Vite: Vite_Icon,
   Github: Github_Icon,

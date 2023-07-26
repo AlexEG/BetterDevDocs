@@ -20,6 +20,10 @@ import CSSMDNRoutes from "./DATA/CSS/CSSMDNRoutes";
 import ViteHome from "./pages/ViteHome";
 import ViteOfficialRoutes from "./DATA/Vite/ViteOfficialRoutes";
 
+// GoLang
+import GoLangHome from "./pages/GoLangHome";
+import GoW3SchoolRoutes from "./DATA/GoLang/GoW3SchoolRoutes";
+
 function App() {
   return (
     <BrowserRouter>
@@ -44,13 +48,14 @@ function App() {
         <Route path="css" element={<CSSHome />}>
           <Route path="mdn/*" element={<CSSMDNRoutes />}></Route>
         </Route>
+
         <Route path="vite" element={<ViteHome />}>
           <Route path="official/*" element={<ViteOfficialRoutes />}></Route>
         </Route>
 
-        {/* <Route path="css" element={<CSSHome />}>
-          <Route path="mdn/*" element={<CSSMDNRoutes />}></Route>
-        </Route> */}
+        <Route path="golang" element={<GoLangHome />}>
+          <Route path="w3-school/*" element={<GoW3SchoolRoutes />}></Route>
+        </Route>
 
         <Route path="*" element={<Page404 />}></Route>
       </Routes>

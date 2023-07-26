@@ -13,6 +13,7 @@ import MultiLineWarning from "./MultiLineWarning";
 import ImgsGroup from "./ImgsGroup";
 import CodeKeyword from "./CodeKeyword";
 import UnorderedList from "./UnorderedList";
+import A from "./A";
 export default {
   p(content: string) {
     return <P content={content} />;
@@ -60,5 +61,8 @@ export default {
   },
   ul(items: string[]) {
     return <UnorderedList items={items} />;
+  },
+  a(src: string, text: string) {
+    return <A src={src} text={text} />;
   },
 };
