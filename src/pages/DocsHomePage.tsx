@@ -15,7 +15,6 @@ function DocsHomePage() {
           <img src={Icons.GoLang} alt="GoLang" width="64px" />
         </Link>
 
-        <img src={Icons.HTML} alt="HTML" width="64px" />
         <Link to="javascript">
           <img src={Icons.JavaScript} alt="JavaScript" width="64px" />
         </Link>
@@ -28,6 +27,7 @@ function DocsHomePage() {
           <img src={Icons.TailwindCSS} alt="TailwindCSS" width="64px" />
         </Link>
 
+        {/* <img src={Icons.HTML} alt="HTML" width="64px" /> */}
         {/* <img src={Icons.Github} alt="Github" width="64px" /> */}
         {/* <img src={Icons.CSS} alt="CSS" width="64px" /> */}
         {/* <img src={Icons.VSCode} alt="VSCode" width="64px" /> */}

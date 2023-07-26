@@ -3,7 +3,7 @@ import CSS_Icon from "../assets/icons/CSS.svg";
 // import Firebase_Icon from "../assets/icons/Firebase-Dark.svg";
 import Github_Icon from "../assets/icons/Github-Dark.svg";
 import GoLang_Icon from "../assets/icons/GoLang.svg";
-import HTML_Icon from "../assets/icons/HTML.svg";
+// import HTML_Icon from "../assets/icons/HTML.svg";
 import JS_Icon from "../assets/icons/JavaScript.svg";
 // import Markdown_Icon from "../assets/icons/Markdown-Dark.svg";
 // import React_Icon from "../assets/icons/React-Dark.svg";
@@ -16,7 +16,7 @@ import Vite_Icon from "../assets/icons/Vite-Dark.svg";
 
 export default {
   // Markdown: Markdown_Icon,
-  HTML: HTML_Icon,
+  // HTML: HTML_Icon,
   CSS: CSS_Icon,
   // Sass: Sass_Icon,
   TailwindCSS: TailwindCSS_Icon,
@@ -28,6 +28,6 @@ export default {
   GoLang: GoLang_Icon,
   // framerMotion: framerMotion_Icon,
   Vite: Vite_Icon,
-  Github: Github_Icon,
-  VSCode: VSCode_Icon,
+  // Github: Github_Icon,
+  // VSCode: VSCode_Icon,
 };

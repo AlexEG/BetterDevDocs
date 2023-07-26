@@ -2,6 +2,16 @@ import HTML from "../../../components/HTML/HTML";
 
 export default function Go_W3School_1_2() {
   const code1 = `go version`;
+  const code2 = `go mod init example.com/hello`;
+  const code3 = `// helloworld.go
+  package main
+  import ("fmt")
+  
+  func main() {
+    fmt.Println("Hello World!")
+  }`;
+  const code4 = `go run .\\helloworld.go`;
+  const code5 = `go build  .\\helloworld.go`;
   return (
     <>
       {HTML.h1("Go Getting Started")}
@@ -58,16 +68,29 @@ export default function Go_W3School_1_2() {
         "Run the [[Go: Install/Update Tools]] command",
         "Select all the provided tools and click OK",
       ])}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
+      {HTML.p("VS Code is now configured to use Go.")}
+      {HTML.p("Open up a terminal window and type:")}
+      {HTML.code("bash", code2)}
+      {HTML.p(
+        "Do not worry if you do not understand why we type the above command. Just think of it as something that you always do, and that you will learn more about in a later chapter.",
+      )}
+      {HTML.span("Create a new file ([[File > New File]]). ")}
+      {HTML.span(
+        "Copy and paste the following code and save the file as [[helloworld.go]]",
+      )}
+      {HTML.span("([[File > Save As]]):")}
+
+      {HTML.code("go", code3)}
+      {HTML.p("Now, run the code: Open a terminal in VS Code and type:")}
+      {HTML.code("bash", code4)}
+      {HTML.p("output: [[Hello World!]]")}
+      {HTML.p(
+        "Congratulations! You have now written and executed your first Go program.",
+      )}
+      {HTML.p(
+        "If you want to save the program as an executable, type and run:",
+      )}
+      {HTML.code("bash", code5)}
       {HTML.p("")}
       {HTML.p("")}
     </>
