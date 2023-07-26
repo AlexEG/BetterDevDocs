@@ -10,11 +10,15 @@ hljs.registerLanguage("go", go);
 import css from "highlight.js/lib/languages/css";
 hljs.registerLanguage("css", css);
 
+import xml from "highlight.js/lib/languages/xml";
+hljs.registerLanguage("xml", xml);
+
 import typescript from "highlight.js/lib/languages/typescript";
 hljs.registerLanguage("typescript", typescript);
 
 import bash from "highlight.js/lib/languages/bash";
 hljs.registerLanguage("bash", bash);
+
 import json from "highlight.js/lib/languages/json";
 hljs.registerLanguage("json", json);
 
@@ -37,7 +41,7 @@ function CodeBlock({
     : hljs.highlightAuto(content);
 
   return (
-    <div className="selection:bg-[#384963] selection:text-current relative group max-w-full mx-auto my-3 overflow-hidden">
+    <div className="selection:bg-[#384963] selection:text-current relative group max-w-full mx-auto my-3 overflow-hidden text-sm">
       <pre className="hljs rounded-lg p-3 ">
         <code dangerouslySetInnerHTML={{ __html: highlighted.value }} />
       </pre>

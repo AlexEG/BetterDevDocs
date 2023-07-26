@@ -12,11 +12,8 @@ import Warning from "./Warning";
 import MultiLineWarning from "./MultiLineWarning";
 import ImgsGroup from "./ImgsGroup";
 import CodeKeyword from "./CodeKeyword";
-
+import UnorderedList from "./UnorderedList";
 export default {
-  img(src: string) {
-    return <Img src={src} />;
-  },
   p(content: string) {
     return <P content={content} />;
   },
@@ -55,7 +52,13 @@ export default {
   hr() {
     return <Hr />;
   },
+  img(src: string) {
+    return <Img src={src} />;
+  },
   images(imgsArr: string[]) {
     return <ImgsGroup imgsArr={imgsArr} />;
+  },
+  ul(items: string[]) {
+    return <UnorderedList items={items} />;
   },
 };
