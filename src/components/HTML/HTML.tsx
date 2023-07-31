@@ -14,6 +14,7 @@ import ImgsGroup from "./ImgsGroup";
 import CodeKeyword from "./CodeKeyword";
 import UnorderedList from "./UnorderedList";
 import A from "./A";
+import Table from "./Table";
 export default {
   p(content: string) {
     return <P content={content} />;
@@ -64,5 +65,8 @@ export default {
   },
   a(src: string, text: string) {
     return <A src={src} text={text} />;
+  },
+  table(th: string[], content: any) {
+    return <Table th={th} content={content} />;
   },
 };

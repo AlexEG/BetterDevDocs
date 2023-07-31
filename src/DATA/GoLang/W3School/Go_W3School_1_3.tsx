@@ -78,16 +78,6 @@ func main()
         "You can write more compact code, like shown below (this is not recommended because it makes the code more difficult to read):",
       )}
       {HTML.code("go", code3)}
-
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
     </>
   );
 }

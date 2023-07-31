@@ -4,6 +4,8 @@ import SectionComingSoon from "../SectionComingSoon";
 import Go_W3School_1_1 from "./W3School/Go_W3School_1_1";
 import Go_W3School_1_2 from "./W3School/Go_W3School_1_2";
 import Go_W3School_1_3 from "./W3School/Go_W3School_1_3";
+import Go_W3School_1_4 from "./W3School/Go_W3School_1_4";
+import Go_W3School_1_5 from "./W3School/Go_W3School_1_5";
 
 function GoW3SchoolRoutes() {
   return (
@@ -11,8 +13,8 @@ function GoW3SchoolRoutes() {
       <Route path="go-introduction" element={<Go_W3School_1_1 />}></Route>
       <Route path="go-getting-started" element={<Go_W3School_1_2 />}></Route>
       <Route path="go-syntax" element={<Go_W3School_1_3 />}></Route>
-      <Route path="go-comments" element={<Go_W3School_1_1 />}></Route>
-      <Route path="go-variables" element={<Go_W3School_1_1 />}></Route>
+      <Route path="go-comments" element={<Go_W3School_1_4 />}></Route>
+      <Route path="go-variables" element={<Go_W3School_1_5 />}></Route>
       <Route
         path="go-multiple-variable-declaration"
         element={<Go_W3School_1_1 />}
