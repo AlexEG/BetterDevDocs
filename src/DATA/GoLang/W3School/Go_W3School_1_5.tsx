@@ -4,37 +4,61 @@ export default function Go_W3School_1_5() {
   const code1 = `var variablename type = value`;
   const code2 = `variablename := value`;
   const code3 = `package main
-  import ("fmt")
-  
-  func main() {
-    var student1 string = "John" //type is string
-    var student2 = "Jane" //type is inferred
-    x := 2 //type is inferred
-  
-    fmt.Println(student1)
-    fmt.Println(student2)
-    fmt.Println(x)
-  }`;
+import ("fmt")
+
+func main() {
+  var student1 string = "John" //type is string
+  var student2 = "Jane" //type is inferred
+  x := 2 //type is inferred
+
+  fmt.Println(student1)
+  fmt.Println(student2)
+  fmt.Println(x)
+}`;
   const code4 = `package main
-  import ("fmt")
-  
-  func main() {
-    var a string
-    var b int
-    var c bool
-  
-    fmt.Println(a)
-    fmt.Println(b)
-    fmt.Println(c)
-  }`;
+import ("fmt")
+
+func main() {
+  var a string
+  var b int
+  var c bool
+
+  fmt.Println(a)
+  fmt.Println(b)
+  fmt.Println(c)
+}`;
   const code5 = `package main
-  import ("fmt")
-  
-  func main() {
-    var student1 string
-    student1 = "John"
-    fmt.Println(student1)
-  }`;
+import ("fmt")
+
+func main() {
+  var student1 string
+  student1 = "John"
+  fmt.Println(student1)
+}`;
+
+  const code6 = `package main
+import ("fmt")
+
+var a int
+var b int = 2
+var c = 3
+
+func main() {
+  a = 1
+  fmt.Println(a)
+  fmt.Println(b)
+  fmt.Println(c)
+}`;
+  const code7 = `package main
+import ("fmt")
+
+a := 1
+
+func main() {
+  fmt.Println(a)
+}
+// Result:
+/* ./prog.go:5:1: syntax error: non-declaration statement outside function body */`;
   return (
     <>
       {HTML.h1("Go Variables")}{" "}
@@ -120,27 +144,14 @@ export default function Go_W3School_1_5() {
           ],
         ],
       )}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
+      {HTML.p(
+        "This example shows declaring variables outside of a function, with the [[var]] keyword:",
+      )}
+      {HTML.code("go", code6)}
+      {HTML.warning(
+        "Since := is used outside of a function, running the program results in an error.",
+      )}
+      {HTML.code("go", code7)}
     </>
   );
 }

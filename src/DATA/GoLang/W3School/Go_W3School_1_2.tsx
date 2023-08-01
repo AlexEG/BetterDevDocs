@@ -91,8 +91,6 @@ export default function Go_W3School_1_2() {
         "If you want to save the program as an executable, type and run:",
       )}
       {HTML.code("bash", code5)}
-      {HTML.p("")}
-      {HTML.p("")}
     </>
   );
 }

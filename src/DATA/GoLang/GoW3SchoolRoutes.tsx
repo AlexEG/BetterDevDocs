@@ -6,6 +6,21 @@ import Go_W3School_1_2 from "./W3School/Go_W3School_1_2";
 import Go_W3School_1_3 from "./W3School/Go_W3School_1_3";
 import Go_W3School_1_4 from "./W3School/Go_W3School_1_4";
 import Go_W3School_1_5 from "./W3School/Go_W3School_1_5";
+import Go_W3School_1_6 from "./W3School/Go_W3School_1_6";
+import Go_W3School_1_7 from "./W3School/Go_W3School_1_7";
+import Go_W3School_1_8 from "./W3School/Go_W3School_1_8";
+import Go_W3School_1_9 from "./W3School/Go_W3School_1_9";
+import Go_W3School_1_10 from "./W3School/Go_W3School_1_10";
+import Go_W3School_1_11 from "./W3School/Go_W3School_1_11";
+import Go_W3School_1_12 from "./W3School/Go_W3School_1_12";
+import Go_W3School_1_13 from "./W3School/Go_W3School_1_13";
+import Go_W3School_1_14 from "./W3School/Go_W3School_1_14";
+import Go_W3School_1_15 from "./W3School/Go_W3School_1_15";
+import Go_W3School_1_16 from "./W3School/Go_W3School_1_16";
+import Go_W3School_1_17 from "./W3School/Go_W3School_1_17";
+import Go_W3School_1_18 from "./W3School/Go_W3School_1_18";
+import Go_W3School_1_19 from "./W3School/Go_W3School_1_19";
+
 
 function GoW3SchoolRoutes() {
   return (
@@ -17,24 +32,24 @@ function GoW3SchoolRoutes() {
       <Route path="go-variables" element={<Go_W3School_1_5 />}></Route>
       <Route
         path="go-multiple-variable-declaration"
-        element={<Go_W3School_1_1 />}
+        element={<Go_W3School_1_6 />}
       ></Route>
       <Route
         path="go-variable-naming-rules"
-        element={<Go_W3School_1_1 />}
+        element={<Go_W3School_1_7 />}
       ></Route>
-      <Route path="go-constants" element={<Go_W3School_1_1 />}></Route>
-      <Route path="go-output-functions" element={<Go_W3School_1_1 />}></Route>
-      <Route path="go-formatting-verbs" element={<Go_W3School_1_1 />}></Route>
-      <Route path="go-basic-data-types" element={<Go_W3School_1_1 />}></Route>
-      <Route path="go-boolean" element={<Go_W3School_1_1 />}></Route>
-      <Route path="go-integer" element={<Go_W3School_1_1 />}></Route>
-      <Route path="go-float" element={<Go_W3School_1_1 />}></Route>
-      <Route path="go-string" element={<Go_W3School_1_1 />}></Route>
-      <Route path="go-arrays" element={<Go_W3School_1_1 />}></Route>
-      <Route path="go-create-slice" element={<Go_W3School_1_1 />}></Route>
-      <Route path="go-modify-slice" element={<Go_W3School_1_1 />}></Route>
-      <Route path="go-operators" element={<Go_W3School_1_1 />}></Route>
+      <Route path="go-constants" element={<Go_W3School_1_8 />}></Route>
+      <Route path="go-output-functions" element={<Go_W3School_1_9 />}></Route>
+      <Route path="go-formatting-verbs" element={<Go_W3School_1_10 />}></Route>
+      <Route path="go-basic-data-types" element={<Go_W3School_1_11 />}></Route>
+      <Route path="go-boolean" element={<Go_W3School_1_12 />}></Route>
+      <Route path="go-integer" element={<Go_W3School_1_13 />}></Route>
+      <Route path="go-float" element={<Go_W3School_1_14 />}></Route>
+      <Route path="go-string" element={<Go_W3School_1_15 />}></Route>
+      <Route path="go-arrays" element={<Go_W3School_1_16 />}></Route>
+      <Route path="go-create-slice" element={<Go_W3School_1_17 />}></Route>
+      <Route path="go-modify-slice" element={<Go_W3School_1_18 />}></Route>
+      <Route path="go-operators" element={<Go_W3School_1_19 />}></Route>
       <Route path="go-arithmetic" element={<Go_W3School_1_1 />}></Route>
       <Route path="go-assignment" element={<Go_W3School_1_1 />}></Route>
       <Route path="go-comparison" element={<Go_W3School_1_1 />}></Route>

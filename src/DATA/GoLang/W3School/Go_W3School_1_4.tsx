@@ -78,13 +78,6 @@ func main() {
         "The commented code can be saved for later reference and troubleshooting.",
       )}
       {HTML.code("go", code4)}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
-      {HTML.p("")}
     </>
   );
 }

@@ -9,8 +9,6 @@ function Warning({ content }: Warning) {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="none"
-        // strokeWidth={1.5}
-        // stroke="rgb(29 78 216)"
         className="w-6 h-6 absolute top-1 left-2"
       >
         <g strokeWidth="0"></g>
