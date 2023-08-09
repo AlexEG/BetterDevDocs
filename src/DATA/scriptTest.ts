@@ -30,6 +30,7 @@ function getContent() {
   content = content.replaceAll("<p>","\n{HTML.p(`")
   content = content.replaceAll("<ul>","\n{HTML.ul([")
   content = content.replaceAll("<li>","`")
+  content = content.replaceAll("<strong>","")
   
   content = content.replaceAll('<div class="w3-code',"\n\n{HTML.code('', code)}\n\n")
   
@@ -54,6 +55,7 @@ function getContent() {
   content = content.replaceAll("</td>","`,")
   content = content.replaceAll("</th>","`,")
   content = content.replaceAll("</code>","]]")
+  content = content.replaceAll("</strong>","")
 
   return content
 }
