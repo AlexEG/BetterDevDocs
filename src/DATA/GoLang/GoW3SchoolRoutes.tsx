@@ -20,7 +20,25 @@ import Go_W3School_1_16 from "./W3School/Go_W3School_1_16";
 import Go_W3School_1_17 from "./W3School/Go_W3School_1_17";
 import Go_W3School_1_18 from "./W3School/Go_W3School_1_18";
 import Go_W3School_1_19 from "./W3School/Go_W3School_1_19";
-
+import Go_W3School_1_20 from "./W3School/Go_W3School_1_20";
+import Go_W3School_1_21 from "./W3School/Go_W3School_1_21";
+import Go_W3School_1_22 from "./W3School/Go_W3School_1_22";
+import Go_W3School_1_23 from "./W3School/Go_W3School_1_23";
+import Go_W3School_1_24 from "./W3School/Go_W3School_1_24";
+import Go_W3School_1_25 from "./W3School/Go_W3School_1_25";
+import Go_W3School_1_26 from "./W3School/Go_W3School_1_26";
+import Go_W3School_1_27 from "./W3School/Go_W3School_1_27";
+import Go_W3School_1_28 from "./W3School/Go_W3School_1_28";
+import Go_W3School_1_29 from "./W3School/Go_W3School_1_29";
+import Go_W3School_1_30 from "./W3School/Go_W3School_1_30";
+import Go_W3School_1_31 from "./W3School/Go_W3School_1_31";
+import Go_W3School_1_32 from "./W3School/Go_W3School_1_32";
+import Go_W3School_1_33 from "./W3School/Go_W3School_1_33";
+import Go_W3School_1_34 from "./W3School/Go_W3School_1_34";
+import Go_W3School_1_35 from "./W3School/Go_W3School_1_35";
+import Go_W3School_1_36 from "./W3School/Go_W3School_1_36";
+import Go_W3School_1_37 from "./W3School/Go_W3School_1_37";
+import Go_W3School_1_38 from "./W3School/Go_W3School_1_38";
 
 function GoW3SchoolRoutes() {
   return (
@@ -50,37 +68,37 @@ function GoW3SchoolRoutes() {
       <Route path="go-create-slice" element={<Go_W3School_1_17 />}></Route>
       <Route path="go-modify-slice" element={<Go_W3School_1_18 />}></Route>
       <Route path="go-operators" element={<Go_W3School_1_19 />}></Route>
-      <Route path="go-arithmetic" element={<Go_W3School_1_1 />}></Route>
-      <Route path="go-assignment" element={<Go_W3School_1_1 />}></Route>
-      <Route path="go-comparison" element={<Go_W3School_1_1 />}></Route>
-      <Route path="go-logical" element={<Go_W3School_1_1 />}></Route>
-      <Route path="go-bitwise" element={<Go_W3School_1_1 />}></Route>
-      <Route path="go-conditions" element={<Go_W3School_1_1 />}></Route>
-      <Route path="go-if-statement" element={<Go_W3School_1_1 />}></Route>
-      <Route path="go-if-else-statement" element={<Go_W3School_1_1 />}></Route>
-      <Route path="go-else-if-statement" element={<Go_W3School_1_1 />}></Route>
+      <Route path="go-arithmetic" element={<Go_W3School_1_20 />}></Route>
+      <Route path="go-assignment" element={<Go_W3School_1_21 />}></Route>
+      <Route path="go-comparison" element={<Go_W3School_1_22 />}></Route>
+      <Route path="go-logical" element={<Go_W3School_1_23 />}></Route>
+      <Route path="go-bitwise" element={<Go_W3School_1_24 />}></Route>
+      <Route path="go-conditions" element={<Go_W3School_1_25 />}></Route>
+      <Route path="go-if-statement" element={<Go_W3School_1_26 />}></Route>
+      <Route path="go-if-else-statement" element={<Go_W3School_1_27 />}></Route>
+      <Route path="go-else-if-statement" element={<Go_W3School_1_28 />}></Route>
       <Route
         path="go-nested-if-statement"
-        element={<Go_W3School_1_1 />}
+        element={<Go_W3School_1_29 />}
       ></Route>
-      <Route path="go-switch-statement" element={<Go_W3School_1_1 />}></Route>
+      <Route path="go-switch-statement" element={<Go_W3School_1_30 />}></Route>
       <Route
         path="go-multi-case-switch-statement"
-        element={<Go_W3School_1_1 />}
+        element={<Go_W3School_1_31 />}
       ></Route>
-      <Route path="go-loops" element={<Go_W3School_1_1 />}></Route>
+      <Route path="go-loops" element={<Go_W3School_1_32 />}></Route>
       <Route
         path="go-function-create/call"
-        element={<Go_W3School_1_1 />}
+        element={<Go_W3School_1_33 />}
       ></Route>
       <Route
         path="go-function-parameters/arguments"
-        element={<Go_W3School_1_1 />}
+        element={<Go_W3School_1_34 />}
       ></Route>
-      <Route path="go-function-returns" element={<Go_W3School_1_1 />}></Route>
-      <Route path="go-recursion" element={<Go_W3School_1_1 />}></Route>
-      <Route path="go-struct" element={<Go_W3School_1_1 />}></Route>
-      <Route path="go-maps" element={<Go_W3School_1_1 />}></Route>
+      <Route path="go-function-returns" element={<Go_W3School_1_35 />}></Route>
+      <Route path="go-recursion" element={<Go_W3School_1_36 />}></Route>
+      <Route path="go-struct" element={<Go_W3School_1_37 />}></Route>
+      <Route path="go-maps" element={<Go_W3School_1_38 />}></Route>
 
       <Route path="*" element={<SectionComingSoon />}></Route>
     </Routes>
