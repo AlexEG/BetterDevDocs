@@ -20,4 +20,46 @@ Object.values(document.querySelector("#main").querySelectorAll("div.w3-example")
 [`const [${Object.values(document.querySelector("#main").querySelectorAll("div.w3-code")).map((code,i) => `code${i+1}`)}] =`,
 Object.values(document.querySelector("#main").querySelectorAll("div.w3-code")).map((code) => code.querySelector("span").innerText)]
 
+
+function getContent() {
+  let content = document.querySelector("#main").innerHTML
+
+  content = content.replaceAll("<hr>","\n{HTML.hr()}\n")
+  content = content.replaceAll("<h1>","\n{HTML.h1(`")
+  content = content.replaceAll("<h2>","\n{HTML.h2(`")
+  content = content.replaceAll("<p>","\n{HTML.p(`")
+  content = content.replaceAll("<ul>","\n{HTML.ul([")
+  content = content.replaceAll("<li>","`")
+  
+  content = content.replaceAll('<div class="w3-code',"\n\n{HTML.code('', code)}\n\n")
+  
+  content = content.replaceAll('<table class="ws-table-all notranslate">','{HTML.table(["", ""],')
+  
+  content = content.replaceAll("<tr>","[")
+  content = content.replaceAll("<td>","`")
+  content = content.replaceAll("<th>","`")
+  content = content.replaceAll("<tbody>","[")
+
+  content = content.replaceAll('<code class="w3-codespan">',"[[")
+// ----------
+
+  content = content.replaceAll("</h1>","`)}\n")
+  content = content.replaceAll("</h2>","`)}\n")
+  content = content.replaceAll("</p>","`)}\n")
+  content = content.replaceAll("</ul>","])}\n")
+  content = content.replaceAll("</li>","`,")
+  content = content.replaceAll("</table>",")}\n")
+  content = content.replaceAll("</tbody>","]")
+  content = content.replaceAll("</tr>","],")
+  content = content.replaceAll("</td>","`,")
+  content = content.replaceAll("</th>","`,")
+  content = content.replaceAll("</code>","]]")
+
+  return content
+}
+getContent()
+
+
+
+
 */
