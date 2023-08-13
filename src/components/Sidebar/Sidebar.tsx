@@ -5,6 +5,7 @@ import Settings from "../Settings/Settings";
 import SharePost from "../SharePost/SharePost";
 
 interface Sidebar {
+  Theme: any;
   SidebarData: object;
   SidebarState: {
     isTheSidebarOpen: boolean;
@@ -21,6 +22,7 @@ interface Sidebar {
 }
 
 function Sidebar({
+  Theme,
   SidebarData,
   SidebarState,
   openCloseSidebarBtnFunc,
@@ -51,9 +53,13 @@ function Sidebar({
   }
   // <SidebarDocsSourceContainer/> Components [End]
 
+  //!  Theme  !//
+
+  const BG_color = Theme.sidebar.BackgroundColor;
+
   return (
     <aside
-      className={`bg-neutral-950 h-[calc(100%-2.5rem)] fixed top-10 left-0 after:w-0 after:h-0 after:absolute after:top-0 after:right-0 after:border-[1.25rem] after:border-r-transparent after:border-b-transparent after:translate-x-full after:border-neutral-950 pt-10 transition-all delay-75 duration-500 z-10 ${isTheSidebarOpen_CSS}`}
+      className={`${BG_color} h-[calc(100%-2.5rem)] fixed top-10 left-0 after:w-0 after:h-0 after:absolute after:top-0 after:right-0 after:border-[1.25rem] after:border-r-transparent after:border-b-transparent after:translate-x-full after:border-neutral-950 pt-10 transition-all delay-75 duration-500 z-10 ${isTheSidebarOpen_CSS}`}
     >
       <OpenCloseSidebarBtn
         isTheSidebarOpen={SidebarState.isTheSidebarOpen}

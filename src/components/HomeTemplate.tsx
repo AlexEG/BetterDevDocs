@@ -5,11 +5,18 @@ import Navbar from "./Navbar/Navbar";
 import ArticleContent from "./ArticleContent";
 
 interface HomeTemplate {
+  Theme: any;
   SidebarData: object;
   LanguageName: string;
   outlet: React.ReactElement | null;
 }
-function HomeTemplate({ SidebarData, LanguageName, outlet }: HomeTemplate) {
+
+function HomeTemplate({
+  Theme,
+  SidebarData,
+  LanguageName,
+  outlet,
+}: HomeTemplate) {
   const [HomeTemplateState, setHomeTemplateState] = useState({
     NavbarState: {
       SelectedLang: LanguageName,
@@ -96,6 +103,7 @@ function HomeTemplate({ SidebarData, LanguageName, outlet }: HomeTemplate) {
         }
       />
       <Sidebar
+        Theme={Theme}
         SidebarData={SidebarData}
         SidebarState={HomeTemplateState.SidebarState}
         openCloseSidebarBtnFunc={openCloseSidebarBtnFunc}

@@ -23,8 +23,14 @@ import ViteOfficialRoutes from "./DATA/Vite/ViteOfficialRoutes";
 // GoLang
 import GoLangHome from "./pages/GoLangHome";
 import GoW3SchoolRoutes from "./DATA/GoLang/GoW3SchoolRoutes";
+import { useState } from "react";
 
 function App() {
+  const [Theme, setTheme] = useState({
+    sidebar: {
+      BackgroundColor: "bg-neutral-950",
+    },
+  });
   return (
     <BrowserRouter>
       <Routes>
@@ -53,7 +59,7 @@ function App() {
           <Route path="official/*" element={<ViteOfficialRoutes />}></Route>
         </Route>
 
-        <Route path="golang" element={<GoLangHome />}>
+        <Route path="golang" element={<GoLangHome Theme={Theme} />}>
           <Route path="w3-school/*" element={<GoW3SchoolRoutes />}></Route>
         </Route>
 

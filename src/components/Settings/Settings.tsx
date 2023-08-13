@@ -55,6 +55,7 @@ function Settings({ isSettingsOpen }: Section) {
     "animate-[openSettings_1000ms_ease-in-out_1_forwards]",
     "animate-[closeSettings_1000ms_ease-in-out_1_forwards]",
   ];
+
   const openCloseCSS = isSettingsOpen ? open : close;
 
   return (
