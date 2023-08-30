@@ -10,7 +10,7 @@ function DocsHomePage() {
         commodi aliquam! Beatae tempore delectus, sapiente iste pariatur
         blanditiis deserunt. 0000 564684961654
       </p>
-      <div className="bg-neutral-950 grid grid-cols-4 w-96 rounded-lg p-4 gap-2">
+      <div className="bg-neutral-950 grid grid-cols-4  rounded-lg p-4 gap-6">
         <Link to="golang">
           <img src={Icons.GoLang} alt="GoLang" width="64px" />
         </Link>
@@ -25,6 +25,10 @@ function DocsHomePage() {
 
         <Link to="tailwindcss">
           <img src={Icons.TailwindCSS} alt="TailwindCSS" width="64px" />
+        </Link>
+
+        <Link to="my-stuff">
+          <img src={Icons.myStuff} alt="My Stuff" width="64px" />
         </Link>
 
         {/* <img src={Icons.HTML} alt="HTML" width="64px" /> */}

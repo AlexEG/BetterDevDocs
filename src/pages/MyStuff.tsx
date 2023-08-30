@@ -1,13 +1,13 @@
 import HomeTemplate from "../components/HomeTemplate";
 import { Outlet } from "react-router-dom";
-import CSSSidebarData from "../DATA/CSS/CSSSidebarData";
+import MyStuffSidebarData from "../DATA/MyStuff/MyStuffSidebarData";
 
 function CSSHome({ Theme }: { Theme: any }) {
   return (
     <HomeTemplate
       Theme={Theme}
-      SidebarData={CSSSidebarData}
-      LanguageName="CSS"
+      SidebarData={MyStuffSidebarData}
+      LanguageName="myStuff"
       outlet={<Outlet />}
     />
   );

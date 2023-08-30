@@ -5,7 +5,7 @@ import Settings from "../Settings/Settings";
 import SharePost from "../SharePost/SharePost";
 
 interface Sidebar {
-  Theme: any;
+  // Theme: any;
   SidebarData: object;
   SidebarState: {
     isTheSidebarOpen: boolean;
